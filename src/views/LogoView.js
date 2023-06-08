@@ -19,10 +19,24 @@ const LogoView = () => {
 		autoplayspeed: 1000,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1440,
+        settings: {
+          arrows: false,
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 1024,
         settings: {
           arrows: false,
           slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          slidesToShow: 2,
         },
       },
       {
@@ -36,7 +50,7 @@ const LogoView = () => {
   };
 
   return (
-    <div className="Logos px-4">
+    <div className="logos px-4">
       <section className="center slider">
         <div className="py-[24px] md:py-[70px]">
           <Slider {...settings}>

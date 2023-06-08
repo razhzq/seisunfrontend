@@ -8,13 +8,34 @@ import "@fontsource/barlow/400.css";
 import "@fontsource/barlow/400-italic.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [ scrollPosition, setScrollPosition ] = useState(0);
+  const handleScroll = () => {
+    setScrollPosition(window.scrollY)
+    const scrollPosition = window.scrollY;
+    console.log(scrollPosition)
+  };
+
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [])
+
   return (
+    
     <div className="App">
       <HeaderNav></HeaderNav>
 
-      <TradeView></TradeView>
+      <TradeView style={
+        {
+          'transForm': `translate(234px, 599px)`
+        }
+      }></TradeView>
       <AssetsView></AssetsView>
     </div>
   );

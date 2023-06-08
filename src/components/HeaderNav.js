@@ -31,10 +31,10 @@ const HeaderNav = () => {
 								</div>
 							) : (
 								<div className="bg-black fixed h-[100vh] w-full pl-8 z-50">
-									<a href="#" className='w-[105px] text-center h-[32px] py-5 flex font-bold text-[32px] leading-[34px] font-["Barlow"] text-white uppercase py-[30px]'>DOCS</a>
-									<a href="#" className='w-[105px] text-center h-[32px] py-5 flex font-bold text-[32px] leading-[34px] font-["Barlow"] text-white uppercase py-[30px]'>CONTACTS</a>
-									<a href="#" className='w-[105px] text-center h-[32px] py-5 flex font-bold text-[32px] leading-[34px] font-["Barlow"] text-white uppercase py-[30px]'>TWITTER</a>
-									<a href="#" className='w-[105px] text-center h-[32px] py-5 flex font-bold text-[32px] leading-[34px] font-["Barlow"] text-white uppercase py-[30px]'>DISCORD</a>
+									<a href="#" className='w-[105px] text-center h-[32px] py-5 flex font-bold text-[32px] leading-[34px] text-white uppercase py-[30px]'>DOCS</a>
+									<a href="#" className='w-[105px] text-center h-[32px] py-5 flex font-bold text-[32px] leading-[34px] text-white uppercase py-[30px]'>CONTACTS</a>
+									<a href="#" className='w-[105px] text-center h-[32px] py-5 flex font-bold text-[32px] leading-[34px] text-white uppercase py-[30px]'>TWITTER</a>
+									<a href="#" className='w-[105px] text-center h-[32px] py-5 flex font-bold text-[32px] leading-[34px] text-white uppercase py-[30px]'>DISCORD</a>
 				
 								</div>
 							)
