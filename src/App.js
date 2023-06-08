@@ -11,32 +11,27 @@ import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [ scrollPosition, setScrollPosition ] = useState(0);
-  const handleScroll = () => {
-    setScrollPosition(window.scrollY)
-    const scrollPosition = window.scrollY;
-    console.log(scrollPosition)
-  };
+  // const [ scrollPosition, setScrollPosition ] = useState(0);
+  // const handleScroll = () => {
+  //   setScrollPosition(window.scrollY)
+  //   const scrollPosition = window.scrollY;
+  //   console.log(scrollPosition)
+  // };
 
-  useEffect(() => {
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [])
+  // useEffect(() => {
+  //   handleScroll();
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [])
 
   return (
     
     <div className="App">
       <HeaderNav></HeaderNav>
-
-      <TradeView style={
-        {
-          'transForm': `translate(234px, 599px)`
-        }
-      }></TradeView>
-      <AssetsView></AssetsView>
+      <TradeView></TradeView>
+      <AssetsView ></AssetsView>
     </div>
   );
 }

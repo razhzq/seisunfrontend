@@ -119,3 +119,10 @@
   color: white;
   transform: rotateY(180deg);
 }
+
+/* .center {
+  display: flexbox;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+} */
