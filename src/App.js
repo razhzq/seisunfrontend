@@ -3,6 +3,8 @@ import HeaderNav from './components/HeaderNav';
 import TradeView from './views/TradeView';
 import AssetsView from './views/AssetsView';
 import DetailView from './views/DetailView';
+import BenefitView from './views/BenefitView';
+import ContactView from './views/ContactView';
 import './App.css';
 import "@fontsource/barlow";
 import "@fontsource/barlow/400.css";
@@ -34,6 +36,8 @@ function App() {
       <TradeView></TradeView>
       <AssetsView ></AssetsView>
       <DetailView></DetailView>
+      <BenefitView></BenefitView>
+      <ContactView></ContactView>
     </div>
   );
 }
