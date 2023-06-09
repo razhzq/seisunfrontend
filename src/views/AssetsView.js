@@ -17,6 +17,13 @@ const AssetsView = () => {
         breakpoint: 1440,
         settings: {
           arrows: false,
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1280,
+        settings: {
+          arrows: false,
           slidesToShow: 2,
         },
       },
@@ -38,7 +45,7 @@ const AssetsView = () => {
   };
 
   return (
-    <div className="assets px-8 flex flex-col py-[190px]">
+    <div className="container assets flex flex-col py-[190px] mx-auto">
       <p className="text-white font-bold text-[45px] leading-[45px] text-center uppercase ">Discover<br/>Tradable Assets</p>
 
       <div className="border border-white w-[327px] border-opacity-50 mx-auto mt-[33px]"></div>

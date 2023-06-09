@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import HeaderNav from './components/HeaderNav';
 import TradeView from './views/TradeView';
 import AssetsView from './views/AssetsView';
+import DetailView from './views/DetailView';
 import './App.css';
 import "@fontsource/barlow";
 import "@fontsource/barlow/400.css";
@@ -32,6 +33,7 @@ function App() {
       <HeaderNav></HeaderNav>
       <TradeView></TradeView>
       <AssetsView ></AssetsView>
+      <DetailView></DetailView>
     </div>
   );
 }
