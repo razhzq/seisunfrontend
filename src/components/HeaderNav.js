@@ -20,12 +20,12 @@ const HeaderNav = () => {
 						{
 							!navbarOpen ? (
 								<div className="bg-black flex flex-row gap-[30px]">
-									<li className='w-[105px] text-center h-[32px] border-[#AEAEAE] border-[1px] border-opacity-80 rounded-[15px] py-5 flex items-center justify-center bg-[#1A1A1A]'>
-										<a href="/docs" className="text-white">DOCS</a>
+									<li className='w-[105px] text-center h-[32px] border-[#AEAEAE] border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase'>
+										<a href="/docs" className="text-white">docs</a>
 									</li>
 										
-									<li className='w-[105px] text-center h-[32px] border-[#AEAEAE] border-[1px] border-opacity-80 rounded-[15px] py-5 flex items-center justify-center bg-[#1A1A1A]'>
-										<a href="/contacts" className="text-white">CONTACTS</a>
+									<li className='w-[105px] text-center h-[32px] border-[#AEAEAE] border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase'>
+										<a href="/contacts" className="text-white">contacts</a>
 									</li>
 								</div>
 							) : (
