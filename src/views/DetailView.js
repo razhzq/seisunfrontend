@@ -12,7 +12,8 @@ const DetailView = () => {
 					<div className='absolute left-[20px] lg:left-[124px]  top-[87px] w-[403px] text-left z-10'>
 						<p className='uppercase font-bold text-black text-[45px] leading-[34px]'>BONDING CURVE</p>
 						<p className='w-[365px] ml-[38px] mt-[13px] font-normal font-medium text-[20px] leading-[34px]'>Self-regulating mechanism for autonomous vault rebalancing to ensure price stability. Adjusts token supply in response to changes in protocol demand to accurately reflect token utility.</p>
-						<button className="bg-[#1A1A1A] w-[105px] h-[32px] rounded-[15px] font-medium leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center mt-[10px] font-bold">LEARN MORE</button>
+
+						<button className="bg-[#1A1A1A] w-[105px] h-[32px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center font-bold items-center">LEARN MORE</button>
 					</div>
 
 					<div className="left-[0px] bottom-0 absolute w-[832px] hidden xl:block">
@@ -33,7 +34,7 @@ const DetailView = () => {
 						<p className='uppercase font-bold text-black text-[45px] leading-[34px]'>PRICING NETWORK</p>
 						<p className='w-[365px] text-left ml-[15px] mt-[19px] font-normal font-medium text-[20px] leading-[34px]'>Node operators creating consensus for on-chain pricing data for use by the community.</p>
 
-						<button className="bg-[#1A1A1A] w-[105px] h-[32px] rounded-[15px] font-medium leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center mt-[19px] font-bold">LEARN MORE</button>
+						<button className="bg-[#1A1A1A] w-[105px] h-[32px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center mt-[19px] font-bold items-center">LEARN MORE</button>
 
 					</div>
 					<div className="right-[-4px] bottom-0 absolute w-[770px]">

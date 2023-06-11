@@ -18,7 +18,7 @@ const BenefitView = () => {
 	return (
 		<div className='container py-[170px] lg:py-[270px] mx-auto'>
 			<div>
-				<p className='text-white font-bold text-[40px] leading-[40px] uppercase tracking-wider'>Why APED</p>
+				<p className='text-white font-bold text-[40px] leading-[40px] uppercase tracking-wider tracking-[.045em]'>Why APED</p>
 			</div>
 
       <div className="visible lg:invisible border border-white w-[327px] border-opacity-50 mx-auto mt-[33px]"></div>

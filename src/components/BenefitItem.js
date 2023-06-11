@@ -10,9 +10,9 @@ const BenefitItem = ({data}) => {
 			</div>
 
 			<div className='ml-[10px]'>
-				<p className="text-left font-bold text-[24px] leading-[34px] uppercase text-white">{data.title}</p>
+				<p className="text-left font-bold text-[24px] leading-[34px] uppercase text-white capitalize">{data.title}</p>
 				
-				<p className="text-left w-full font-light text-[14px] leading-[14px] uppercase text-white">{data.text}</p>
+				<p className="text-left w-full font-[300] text-[14px] leading-[14px] uppercase text-white">{data.text}</p>
 			</div>
 		</div>
 	)
