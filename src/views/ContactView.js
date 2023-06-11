@@ -10,14 +10,14 @@ const ContactView = () => {
 			<div>
 				<div><img src={transaped} className='mx-auto'></img></div>
 				<div className='flex flex-row gap-[20px] items-center'>
-					<img src={medium}></img>
-					<img src={discord}></img>
-					<img src={twitter}></img>
+					<a href="#"><img src={medium}></img></a>
+					<a href="https://discord.com/invite/FbFjCz4PAR"><img src={discord}></img></a>
+					<a href="#"><img src={twitter}></img></a>
 				</div>
 			</div>
 			<div className="flex flex-row justify-between w-[208px]">
-				<p className="font-extrabold text-white text-sm uppercase">DOCS</p>
-				<p className="font-extrabold text-white text-sm uppercase">contact us</p>
+				<p className="text-white text-[18px] leading-[22px] font-[800] uppercase flex-none order-none grow-0">DOCS</p>
+				<p className="text-white text-[18px] leading-[22px] font-[800] uppercase flex-none order-none grow-0">contact us</p>
 			</div>
 		</div>
 	)
