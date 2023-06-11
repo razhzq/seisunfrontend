@@ -23,7 +23,7 @@ const BenefitView = () => {
 
       <div className="visible lg:invisible border border-white w-[327px] border-opacity-50 mx-auto mt-[33px]"></div>
 
-			<div className="mt-[33px] gap-x-[110px] gap-y-[33px] justify-center bg-black bg-opacity-15 flex flex-wrap">
+			<div className="mt-[33px] px-4 gap-x-[110px] gap-y-[33px] justify-center bg-black bg-opacity-15 flex flex-wrap">
 				{
 					benefitData.map((item, ind) => 
 						<BenefitItem data={item} key={ind}></BenefitItem>
