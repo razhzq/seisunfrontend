@@ -16,7 +16,7 @@ const benefitData = [
 
 const BenefitView = () => {
 	return (
-		<div className='container py-[170px] lg:py-[270px] mx-auto'>
+		<div className='container py-[170px] lg:py-[270px] mx-auto bg-black'>
 			<div>
 				<p className='text-white font-bold text-[40px] leading-[40px] uppercase tracking-wider tracking-[.045em]'>Why APED</p>
 			</div>
