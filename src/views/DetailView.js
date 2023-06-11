@@ -15,15 +15,15 @@ const DetailView = () => {
 						<button className="bg-[#1A1A1A] w-[105px] h-[32px] rounded-[15px] font-medium leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center mt-[10px] font-bold">LEARN MORE</button>
 					</div>
 
-					<div className="left-[0px] bottom-0 absolute w-[832px] hidden md:block">
+					<div className="left-[0px] bottom-0 absolute w-[832px] hidden xl:block">
 						<img src={trees_left}></img>
 					</div>
 
-					<div className="left-[20px] top-0 absolute w-[620px] hidden md:block">
+					<div className="left-[20px] top-0 absolute w-[620px] hidden xl:block">
 						<img src={vines_left}></img>
 					</div>
 
-					<div className="left-[-144px] top-[33px] absolute w-[737px] visible md:hidden">
+					<div className="left-[-144px] top-[33px] absolute w-[737px] visible xl:hidden">
 					<img src={vines_right}></img>
 					</div>
 				</div>
@@ -40,7 +40,7 @@ const DetailView = () => {
 						<img src={trees_right}></img>
 					</div>
 
-					<div className="right-[-188px] top-0 absolute w-[1009px] hidden md:block">
+					<div className="right-[-188px] top-0 absolute w-[1009px] hidden xl:block">
 						<img src={vines_right}></img>
 					</div>
 				</div>

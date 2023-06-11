@@ -115,3 +115,12 @@
   color: white;
   transform: rotateY(180deg);
 }
+
+.slick-track {
+  /* width: fit-content !important; */
+}
+
+/* .slick-track .slick-slide {
+  width: 342px !important;
+  margin: 10px;
+} */

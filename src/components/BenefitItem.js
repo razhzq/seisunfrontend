@@ -3,8 +3,10 @@ import React from 'react';
 const BenefitItem = ({data}) => {
 	return (
 		<div className="w-[342px] p-[20px] flex flex-row rounded-[6px] border border-white border-opacity-40">
-			<div className="flex items-center w-[86px]">
-				<img src={data.url} className=""/>
+			<div className="flex items-center">
+				<div className='flex items-center w-[86px] mx-auto justify-center'>
+					<img src={data.url} className="max-w-fit"/>
+				</div>
 			</div>
 
 			<div className='ml-[20px]'>

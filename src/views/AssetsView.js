@@ -12,6 +12,7 @@ const AssetsView = () => {
     arrows: true,
     dots: false,
     swipe: true,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 1440,
@@ -45,7 +46,7 @@ const AssetsView = () => {
   };
 
   return (
-    <div className="container assets flex flex-col py-[190px] mx-auto">
+      <div className="container assets flex flex-col py-[190px] mx-auto">
       <p className="text-white font-bold text-[45px] leading-[45px] text-center uppercase ">Discover<br/>Tradable Assets</p>
 
       <div className="border border-white w-[327px] border-opacity-50 mx-auto mt-[33px]"></div>
