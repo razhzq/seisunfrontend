@@ -63,10 +63,10 @@ const AssetsItem = ({name, CHG, VOL, }) => {
 					</div>
 					<div>
 						<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">CHG</p>
-						<p className="leading-[34px] text-[14px] mb-1">3.2</p>
-						<p className="leading-[34px] text-[14px] mb-1">3.2</p>
-						<p className="leading-[34px] text-[14px] mb-1">3.2</p>
-						<p className="leading-[34px] text-[14px] mb-1">3.2</p>
+						<p className="leading-[34px] text-[14px] mb-1 text-[#FF0000]">3.2</p>
+						<p className="leading-[34px] text-[14px] mb-1 text-[#00FF29]">3.2</p>
+						<p className="leading-[34px] text-[14px] mb-1 text-[#00FF29]">3.2</p>
+						<p className="leading-[34px] text-[14px] mb-1 text-[#FF0000]">3.2</p>
 					</div>
         </div>
 			</div>
