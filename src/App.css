@@ -124,3 +124,11 @@
   width: 342px !important;
   margin: 10px;
 } */
+
+.triangle {
+  border-color: red transparent transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 5px 5px;
+  height: 0px;
+  width: 0px;
+}
