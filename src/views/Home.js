@@ -8,21 +8,18 @@ import ContactView from './ContactView';
 const Home = () => {
     return (
         <div>
-						<section>
+						<section className="overlay">
 							<TradeView></TradeView>
 						</section>
-						<section>
+						<section className="overlay">
             	<AssetsView ></AssetsView>
 						</section>
-						<section>
+						<section className="overlay">
 							<DetailView></DetailView>
+							<BenefitView></BenefitView>
+							<ContactView></ContactView>
 						</section>
-						<section>
-            	<BenefitView></BenefitView>
-            </section>
-						<section>
-            	<ContactView></ContactView>
-						</section>
+						
         </div>
     )
 }
