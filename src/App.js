@@ -1,5 +1,6 @@
 import HeaderNav from './components/HeaderNav';
-import Home from './views/Home';
+import Home from './Home';
+import Contact from './Contact';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './App.css';
@@ -18,12 +19,9 @@ function App() {
 
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />}>
-              <Route index element={<Home />} />
-              <Route path="docs" element={<Home />} />
-              <Route path="contacts" element={<Home />} />
-              <Route path="*" element={<Home />} />
-            </Route>
+            <Route path="/" element={<Home />}/>
+            <Route path="docs" element={<Home />} />
+            <Route path="contacts" element={<Contact />} />
           </Routes>
         </BrowserRouter>
       </div>

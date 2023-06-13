@@ -8,7 +8,7 @@ const HeaderNav = () => {
 		<div className="header fixed top-0 left-0 right-0 z-[100] bg-black py-2">
 			<nav>
 				<div className={` flex flex-wrap items-center justify-between ${navbarOpen ? 'pr-4': 'px-4'}`}>
-					<a href="#" className={`flex items-center ${navbarOpen ? 'invisible' : 'visible'}`}>
+					<a href="/" className={`flex items-center ${navbarOpen ? 'invisible' : 'visible'}`}>
 						<img src={logo} className="h-8 mr-3" alt="APED" />
 					</a>
 					<button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden dark:text-gray-400" aria-controls="navbar-default" aria-expanded="false" onClick={() => setNavbarOpen(!navbarOpen)}>
@@ -31,8 +31,8 @@ const HeaderNav = () => {
 							) : (
 								<div className="bg-black fixed h-[100vh] w-full pl-8 z-50">
 									<div>
-										<a href="#" className='text-center flex font-bold text-[32px]  text-white uppercase'>DOCS</a>
-										<a href="#" className='text-center flex font-bold text-[32px]  text-white uppercase'>CONTACTS</a>
+										<a href="/docs" className='text-center flex font-bold text-[32px]  text-white uppercase'>DOCS</a>
+										<a href="/contacts" className='text-center flex font-bold text-[32px]  text-white uppercase'>CONTACTS</a>
 										<a href="#" className='text-center flex font-bold text-[32px]  text-white uppercase'>TWITTER</a>
 										<a href="https://discord.com/invite/FbFjCz4PAR" className='w-[105px] text-center flex font-bold text-[32px]  text-white uppercase'>DISCORD</a>
 									</div>

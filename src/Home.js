@@ -1,9 +1,9 @@
 import React from 'react';
-import TradeView from './TradeView';
-import AssetsView from './AssetsView';
-import DetailView from './DetailView';
-import BenefitView from './BenefitView';
-import ContactView from './ContactView';
+import TradeView from './views/TradeView';
+import AssetsView from './views/AssetsView';
+import DetailView from './views/DetailView';
+import BenefitView from './views/BenefitView';
+import ContactView from './views/ContactView';
 
 const Home = () => {
     return (
@@ -12,12 +12,12 @@ const Home = () => {
 							<TradeView></TradeView>
 						</section>
 						<section className="overlay">
-            	<AssetsView ></AssetsView>
+            	<AssetsView></AssetsView>
 						</section>
 						<section className="overlay">
 							<DetailView></DetailView>
 							<BenefitView></BenefitView>
-							<ContactView></ContactView>
+							<ContactView className='h-screen'></ContactView>
 						</section>
 						
         </div>
