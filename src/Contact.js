@@ -8,7 +8,7 @@ const Contact = () => {
 				<section className="">
 					<ContactMode></ContactMode>
 				</section>
-				<section className="h-[500px]">
+				<section>
 					<ContactView></ContactView>
 				</section>
 			</div>

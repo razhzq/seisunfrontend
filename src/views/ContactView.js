@@ -6,7 +6,7 @@ import twitter from '../assets/socials/twitter-logo.png';
 
 const ContactView = () => {
 	return (
-		<div className="bg-[url('./assets/main_bg.png')] bg-cover bg-center h-[822px] flex flex-col justify-center items-center h-full">
+		<div className="bg-[url('./assets/main_bg.png')] bg-cover bg-center h-[822px] flex flex-col justify-center items-center h-screen">
 			<div>
 				<div><img src={transaped} className='mx-auto'></img></div>
 				<div className='flex flex-row gap-[20px] items-center'>
