@@ -4,14 +4,16 @@ import synth from '../assets/icons/synth.png';
 import cross from '../assets/icons/cross.png';
 import arrow from '../assets/icons/pink-arrow.png';
 import dollar from '../assets/icons/dollar.png';
+import clip from '../assets/icons/clip.png';
+import lock from '../assets/icons/lock.png';
 
 const benefitData = [
 	{url: synth, title: 'Synthetic', text: 'Trade without directly owning assets. simulated through smart contracts.'},
 	{url: cross, title: 'HIGH LEVERAGE', text: 'Crypto up to 150x, Forex up to 1000x, Stocks and Commodities up to 100x'},
 	{url: arrow, title: 'LOW FEES', text: 'Low trading and gas fees on Layer 2'},
-	{url: arrow, title: 'NO SIGNUP', text: 'Trade directly from your wallet'},
+	{url: clip, title: 'NO SIGNUP', text: 'Trade directly from your wallet'},
 	{url: dollar, title: 'DAI, USDC & USDT', text: 'Trade and  paid in stablecoin of your choice. Initially accepting USDC, USDT & DAI.'},
-	{url: dollar, title: 'PROOF OF RESERVE', text: 'onchain vault provides full transparency and guaranteed liquidity.'}
+	{url: lock, title: 'PROOF OF RESERVE', text: 'onchain vault provides full transparency and guaranteed liquidity.'}
 ]
 
 const BenefitView = () => {

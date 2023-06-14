@@ -9,13 +9,13 @@ const ContactView = () => {
 		<div className="bg-[url('./assets/main_bg.png')] bg-cover bg-center h-[822px] flex flex-col justify-center items-center h-screen">
 			<div>
 				<div><img src={transaped} className='mx-auto'></img></div>
-				<div className='flex flex-row gap-[20px] items-center'>
+				<div className='flex flex-row gap-[20px] items-center mt-[29px]'>
 					<a href="#"><img src={medium}></img></a>
 					<a href="https://discord.com/invite/FbFjCz4PAR"><img src={discord}></img></a>
 					<a href="#"><img src={twitter}></img></a>
 				</div>
 			</div>
-			<div className="flex flex-row justify-between w-[208px]">
+			<div className="flex flex-row justify-between w-[208px] mt-[6px]">
 				<p className="text-white text-[18px] leading-[22px] font-[800] uppercase flex-none order-none grow-0">DOCS</p>
 				<p className="text-white text-[18px] leading-[22px] font-[800] uppercase flex-none order-none grow-0">contact us</p>
 			</div>
