@@ -1,6 +1,38 @@
 import React, { useState } from 'react';
 import chart from '../assets/chart.png';
 import chart1 from '../assets/chart1.png';
+import Chart from './Chart';
+
+// const data = [
+//   {
+//     "Raoul": 25,
+//   },
+//   {
+//     "Raoul": 35,
+//   },
+//   {
+//     "Raoul": 77,
+//   },
+//   {
+//     "Raoul": 0,
+//   },
+//   {
+//     "Raoul": 63,
+//   },
+//   {
+//     "Raoul": 35,
+//   },
+//   {
+//     "Raoul": 22,
+//   },
+//   {
+//     "Raoul": 0,
+//   },
+//   {
+//     "Raoul": 45,
+
+//   }
+// ];
 
 const AssetsItem = ({name, CHG, VOL, }) => {
 	const [ isFlip, setIsFlip ] = useState(false);
@@ -71,6 +103,10 @@ const AssetsItem = ({name, CHG, VOL, }) => {
         </div>
 			</div>
 			
+			
+			{/* <div className='w-[600px] h-[400px]'>
+				<Chart data={data} ></Chart>
+			</div> */}
 		</div>
 	)
 }

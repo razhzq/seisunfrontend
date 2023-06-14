@@ -20,11 +20,11 @@ const DetailView = () => {
 						</div>
 
 						<div className="left-[20px] top-0 absolute w-[620px] hidden xl:block">
-							<img src={vines_left}></img>
+							<img src={vines_left} alt=''></img>
 						</div>
 
 						<div className="left-[-254px] top-[133px] absolute w-[737px] visible xl:hidden">
-							<img src={vines_right}></img>
+							<img src={vines_right} alt=''></img>
 						</div>
 					</div>
 
@@ -38,17 +38,17 @@ const DetailView = () => {
 						</div>
 
 						<div className="right-[-188px] top-0 absolute w-[1009px] hidden xl:block">
-							<img src={vines_right}></img>
+							<img src={vines_right} alt=''></img>
 						</div>
 					</div>
 				</div>
 			
 				<div className="left-[0px] bottom-0 absolute w-[832px] hidden xl:block">
-					<img src={trees_left}></img>
+					<img src={trees_left} alt=''></img>
 				</div>
 				
 				<div className="right-[-250px] xl:right-[-4px] bottom-0 absolute w-[770px]">
-					<img src={trees_right}></img>
+					<img src={trees_right} alt=''></img>
 				</div>
 			</div>
 
@@ -61,7 +61,7 @@ const DetailView = () => {
 						<button className="bg-[#1A1A1A] w-[105px] h-[32px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center font-bold items-center">LEARN MORE</button>
 
 						<div className="right-[-270px] top-[-80px] absolute w-[741px]">
-							<img src={vines_top}></img>
+							<img src={vines_top} alt=''></img>
 						</div>
 					</div>
 				</div>
@@ -77,7 +77,7 @@ const DetailView = () => {
 					
 						
 						<div className="right-[-100px] bottom-[0px] absolute w-[543px]">
-							<img src={trees_bottom}></img>
+							<img src={trees_bottom} alt=''></img>
 						</div>
 					</div>
 				</div>

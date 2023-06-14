@@ -1,8 +1,27 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Slider from 'react-slick';
 import AssetsItem from '../components/AssetsItem';
+import axios from 'axios';
 
 const AssetsView = () => {
+  const [ crypto, setCrypto ] = useState([]);
+
+  useEffect(() => {
+    // const myInterval = setInterval(() => {
+      try {
+        axios.get('https://api2.aped.xyz/cryptos').then(function (res) {
+          console.log(res);
+        })
+      } catch (err) {
+        console.log(err)
+      }
+    // }, 1000);
+
+    // return () => {
+    //   clearInterval(myInterval);
+    // }
+  }, []);
+
   const settings = {
     centerMode: true,
     centerPadding: '10px',
@@ -44,6 +63,7 @@ const AssetsView = () => {
       },
     ],
   };
+
 
   return (
       <div className="assets flex mx-auto bg-black h-screen items-center justify-center overflow-hidden">

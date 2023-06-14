@@ -8,11 +8,11 @@ const ContactView = () => {
 	return (
 		<div className="bg-[url('./assets/main_bg.png')] bg-cover bg-center h-[822px] flex flex-col justify-center items-center h-screen">
 			<div>
-				<div><img src={transaped} className='mx-auto'></img></div>
+				<div><img src={transaped} className='mx-auto' alt=''></img></div>
 				<div className='flex flex-row gap-[20px] items-center mt-[29px]'>
-					<a href="#"><img src={medium}></img></a>
-					<a href="https://discord.com/invite/FbFjCz4PAR"><img src={discord}></img></a>
-					<a href="#"><img src={twitter}></img></a>
+					<a href="#"><img src={medium} alt=''></img></a>
+					<a href="https://discord.com/invite/FbFjCz4PAR"><img src={discord} alt=''></img></a>
+					<a href="#"><img src={twitter} alt=''></img></a>
 				</div>
 			</div>
 			<div className="flex flex-row justify-between w-[208px] mt-[6px]">
