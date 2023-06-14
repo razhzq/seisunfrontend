@@ -13,14 +13,15 @@ const benefitData = [
 	{url: arrow, title: 'LOW FEES', text: 'Low trading and gas fees on Layer 2'},
 	{url: clip, title: 'NO SIGNUP', text: 'Trade directly from your wallet'},
 	{url: dollar, title: 'DAI, USDC & USDT', text: 'Trade and  paid in stablecoin of your choice. Initially accepting USDC, USDT & DAI.'},
-	{url: lock, title: 'PROOF OF RESERVE', text: 'onchain vault provides full transparency and guaranteed liquidity.'}
+	{url: lock, title: 'PROOF OF RESERVE', text: 'Onchain vault provides full transparency and guaranteed liquidity.'}
 ]
 
 const BenefitView = () => {
 	return (
 		<div className='container py-[170px] lg:py-[270px] mx-auto bg-black'>
 			<div>
-				<p className='text-white font-bold text-[40px] leading-[40px] uppercase tracking-wider tracking-[.045em]'>Why APED</p>
+				<p className='text-white font-bold text-[40px] leading-[40px] uppercase tracking-wider tracking-[.045em] hidden md:block'>Trade perpetual futures</p>
+				<p className='text-white font-bold text-[40px] leading-[40px] uppercase tracking-wider tracking-[.045em] block md:hidden'>Why APED</p>
 			</div>
 
       <div className="visible lg:invisible border border-white w-[327px] border-opacity-50 mx-auto mt-[33px]"></div>
