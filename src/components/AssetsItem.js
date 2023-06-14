@@ -5,8 +5,8 @@ import chart1 from '../assets/chart1.png';
 const AssetsItem = ({name, CHG, VOL, }) => {
 	const [ isFlip, setIsFlip ] = useState(false);
   return (
-		<div className='!mx-[10px] flip-card !m-auto !w-[342px] h-[219px] bg-white border-white rounded-[6px] !bg-[#141217] p-[10px] relative border '>
-			<div className={`flip-card-inner ${isFlip ? 'card-rotate': ''}`} onMouseEnter={() => setIsFlip(!isFlip)} onMouseLeave={() => setIsFlip(!isFlip)}>
+		<div className='!mx-[5px] !m-auto !w-[342px] !h-[219px] border-white rounded-[6px] !bg-[#141217] p-[10px] relative border '>
+			<div className={`flip-card-inner ${isFlip ? 'card-rotate': ''}`} onClick={() => setIsFlip(!isFlip)}>
 				<div className="flip-card-front">
 					<div className="flex justify-between font-black text-white text-[34px] leading-[34px] !mr-0">
 						<img src={chart} className='inline-block'></img>

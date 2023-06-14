@@ -6,7 +6,7 @@ import trees_right from '../assets/BondingCurve/trees_right.png';
 
 const DetailView = () => {
 	return (
-		<div className="bg-white mx-auto relative">
+		<div className="bg-white mx-auto relative overflow-hidden">
 			<div className="container mx-auto flex flex-col xl:flex-row h-screen zl:h-[974px]" >
 				<div className="flex-1 relative overflow-hidden h-screen">
 					<div className='absolute left-[20px] xl:left-[124px]  top-[87px] w-[403px] text-left z-10'>

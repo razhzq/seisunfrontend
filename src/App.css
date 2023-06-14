@@ -90,6 +90,12 @@
   transform: rotateY(180deg);
 }
 
+.flip-card .slick-list .slick-track {
+  display: flex;
+  justify-content: center;
+  width: fit-content !important;
+}
+
 @media only screen and (max-width: 640px) {
   .overlay {
     position:sticky;
