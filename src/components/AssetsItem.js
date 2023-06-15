@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import chart from '../assets/chart.png';
 import chart1 from '../assets/chart1.png';
 import Chart from '../components/ChartItem';
@@ -7,8 +7,11 @@ import Chart from '../components/ChartItem';
 
 const AssetsItem = (props) => {
 	const [ isFlip, setIsFlip ] = useState(false);
+	const [ data, setData ] = useState([]);
+	const [ price, setPrice ] = useState([]);
+	const [ change, setChange ] = useState([]);
 
-  return (
+	return (
 		<div className='!mx-[5px] !m-auto !w-[342px] !h-[219px] border-white rounded-[6px] !bg-[#141217] p-[10px] relative border '>
 			<div className={`flip-card-inner ${isFlip ? 'card-rotate': ''}`} onClick={() => setIsFlip(!isFlip)}>
 				<div className="flip-card-front">
@@ -60,20 +63,56 @@ const AssetsItem = (props) => {
 						<p className="leading-[34px] text-[14px] mb-1">ETH/DAI</p>
 						<p className="leading-[34px] text-[14px] mb-1">BNB/DAI</p>
 					</div>
-					<div>
-						<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">PRICE</p>
-						<p className="leading-[34px] text-[14px] mb-1">{props.data[0]?.price.toFixed(2)}</p>
-						<p className="leading-[34px] text-[14px] mb-1">{props.data[1]?.price.toFixed(2)}</p>
-						<p className="leading-[34px] text-[14px] mb-1">{props.data[2]?.price.toFixed(2)}</p>
-						<p className="leading-[34px] text-[14px] mb-1">{props.data[3]?.price.toFixed(2)}</p>
-					</div>
-					<div>
-						<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">CHG</p>
-						<p className="leading-[34px] text-[14px] mb-1 text-[#FF0000]">{props.data[0]?.size.toFixed(2)}</p>
-						<p className="leading-[34px] text-[14px] mb-1 text-[#00FF29]">{props.data[1]?.size.toFixed(2)}</p>
-						<p className="leading-[34px] text-[14px] mb-1 text-[#00FF29]">{props.data[2]?.size.toFixed(2)}</p>
-						<p className="leading-[34px] text-[14px] mb-1 text-[#FF0000]">{props.data[3]?.size.toFixed(2)}</p>
-					</div>
+
+					
+						{
+							props.name == "crypto" && (
+								<div>
+									<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">PRICE</p>
+									<p className="leading-[34px] text-[14px] mb-1">{props.data[0] != undefined ? parseFloat(props.data[0]["BTC/USD"]).toFixed(2) : '0'}</p>
+									<p className="leading-[34px] text-[14px] mb-1">{props.data[8] != undefined ? parseFloat(props.data[8]["SOL/USD"]).toFixed(2) : '0'}</p>
+									<p className="leading-[34px] text-[14px] mb-1">{props.data[1] != undefined ? parseFloat(props.data[1]["ETH/USD"]).toFixed(2) : '0'}</p>
+									<p className="leading-[34px] text-[14px] mb-1">{props.data[11] != undefined ? parseFloat(props.data[11]["DOT/USD"]).toFixed(2) : '0'}</p>
+								</div>
+							)
+						}
+
+						{
+							props.name == "forex" && (
+								<div>
+									<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">PRICE</p>
+									<p className="leading-[34px] text-[14px] mb-1">{props.data[0] != undefined ? parseFloat(props.data[0]["EUR/USD"]).toFixed(2) : '0'}</p>
+									<p className="leading-[34px] text-[14px] mb-1">{props.data[1] != undefined ? parseFloat(props.data[1]["AUD/USD"]).toFixed(2) : '0'}</p>
+									<p className="leading-[34px] text-[14px] mb-1">{props.data[2] != undefined ? parseFloat(props.data[2]["GBP/USD"]).toFixed(2) : '0'}</p>
+									<p className="leading-[34px] text-[14px] mb-1">{props.data[3] != undefined ? parseFloat(props.data[3]["CNH/USD"]).toFixed(2) : '0'}</p>
+								</div>
+							)
+						}
+						
+						{
+							props.name == "crypto" && (
+								<div>
+									<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">CHG</p>
+									<p className="leading-[34px] text-[14px] mb-1" style={props.data[0] != undefined &&  parseFloat(props.data[0]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[0] != undefined ? parseFloat(props.data[0]["changes_24hrs"]).toFixed(2) : 0}</p>
+									<p className="leading-[34px] text-[14px] mb-1" style={props.data[8] != undefined &&  parseFloat(props.data[8]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[8] != undefined ? parseFloat(props.data[8]["changes_24hrs"]).toFixed(2) : 0}</p>
+									<p className="leading-[34px] text-[14px] mb-1" style={props.data[1] != undefined &&  parseFloat(props.data[1]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[1] != undefined ? parseFloat(props.data[1]["changes_24hrs"].toFixed(2)) : 0}</p>
+									<p className="leading-[34px] text-[14px] mb-1" style={props.data[11] != undefined &&  parseFloat(props.data[11]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[11] != undefined ? parseFloat(props.data[11]["changes_24hrs"].toFixed(2)) : 0}</p>
+								</div>
+							)
+						}
+
+						{
+							props.name == "forex" && (
+								<div>
+									<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">CHG</p>
+									<p className="leading-[34px] text-[14px] mb-1" style={props.data[0] != undefined &&  parseFloat(props.data[0]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[0] != undefined ? parseFloat(props.data[0]["changes_24hrs"]).toFixed(2) : 0}</p>
+									<p className="leading-[34px] text-[14px] mb-1" style={props.data[1] != undefined &&  parseFloat(props.data[1]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[1] != undefined ? parseFloat(props.data[1]["changes_24hrs"]).toFixed(2) : 0}</p>
+									<p className="leading-[34px] text-[14px] mb-1" style={props.data[2] != undefined &&  parseFloat(props.data[2]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[2] != undefined ? parseFloat(props.data[2]["changes_24hrs"].toFixed(2)) : 0}</p>
+									<p className="leading-[34px] text-[14px] mb-1" style={props.data[3] != undefined &&  parseFloat(props.data[3]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[3] != undefined ? parseFloat(props.data[3]["changes_24hrs"].toFixed(2)) : 0}</p>
+								</div>
+							)
+						}
+					
         </div>
 			</div>
 			
