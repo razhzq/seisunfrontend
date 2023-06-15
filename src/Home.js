@@ -19,6 +19,7 @@ const Home = () => {
 					<BenefitView></BenefitView>
 					<ContactView></ContactView>
 				</section>
+
 			</div>
     )
 }

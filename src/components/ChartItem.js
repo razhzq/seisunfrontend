@@ -5,9 +5,9 @@ const Chart = ({ data /* see data tab */ }) => (
 	<ResponsiveStream
         data={data}
         keys={[
-            'Raoul',
+            'btc',
         ]}
-        margin={{ top: 50, right: 110, bottom: 0, left: 60 }}
+        margin={{ right: 0, bottom: 0, left: 0 }}
         axisTop={null}
         axisRight={null}
         axisBottom={null}

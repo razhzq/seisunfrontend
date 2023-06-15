@@ -1,49 +1,23 @@
 import React, { useState } from 'react';
 import chart from '../assets/chart.png';
 import chart1 from '../assets/chart1.png';
-import Chart from './Chart';
+import Chart from '../components/ChartItem';
 
-// const data = [
-//   {
-//     "Raoul": 25,
-//   },
-//   {
-//     "Raoul": 35,
-//   },
-//   {
-//     "Raoul": 77,
-//   },
-//   {
-//     "Raoul": 0,
-//   },
-//   {
-//     "Raoul": 63,
-//   },
-//   {
-//     "Raoul": 35,
-//   },
-//   {
-//     "Raoul": 22,
-//   },
-//   {
-//     "Raoul": 0,
-//   },
-//   {
-//     "Raoul": 45,
 
-//   }
-// ];
 
-const AssetsItem = ({name, CHG, VOL, }) => {
+const AssetsItem = (props) => {
 	const [ isFlip, setIsFlip ] = useState(false);
+
   return (
 		<div className='!mx-[5px] !m-auto !w-[342px] !h-[219px] border-white rounded-[6px] !bg-[#141217] p-[10px] relative border '>
 			<div className={`flip-card-inner ${isFlip ? 'card-rotate': ''}`} onClick={() => setIsFlip(!isFlip)}>
 				<div className="flip-card-front">
 					<div className="flex justify-between font-black text-white text-[34px] leading-[34px] !mr-0">
-						<img src={chart} className='inline-block'></img>
-						<p className='flex items-center uppercase font-[900] text-[34px] leading-[34px] uppercase'>{name}</p>
-					</div>
+						<div className="w-[170px] h-[100px]">
+							<Chart data={props.graph} className="w-full h-full"></Chart>
+						</div>
+						<p className='flex items-center uppercase font-[900] text-[34px] leading-[34px] uppercase'>{props.name}</p>
+					</div>2
 					<div className='!w-full h-[157px] absolute bottom-0 left-0 right-0 !mr-0'>
 						<img src={chart1} className="w-full"></img>
 
@@ -88,17 +62,17 @@ const AssetsItem = ({name, CHG, VOL, }) => {
 					</div>
 					<div>
 						<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">PRICE</p>
-						<p className="leading-[34px] text-[14px] mb-1">123.12</p>
-						<p className="leading-[34px] text-[14px] mb-1">123.12</p>
-						<p className="leading-[34px] text-[14px] mb-1">123.12</p>
-						<p className="leading-[34px] text-[14px] mb-1">123.12</p>
+						<p className="leading-[34px] text-[14px] mb-1">{props.data[0]?.price.toFixed(2)}</p>
+						<p className="leading-[34px] text-[14px] mb-1">{props.data[1]?.price.toFixed(2)}</p>
+						<p className="leading-[34px] text-[14px] mb-1">{props.data[2]?.price.toFixed(2)}</p>
+						<p className="leading-[34px] text-[14px] mb-1">{props.data[3]?.price.toFixed(2)}</p>
 					</div>
 					<div>
 						<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">CHG</p>
-						<p className="leading-[34px] text-[14px] mb-1 text-[#FF0000]">3.2</p>
-						<p className="leading-[34px] text-[14px] mb-1 text-[#00FF29]">3.2</p>
-						<p className="leading-[34px] text-[14px] mb-1 text-[#00FF29]">3.2</p>
-						<p className="leading-[34px] text-[14px] mb-1 text-[#FF0000]">3.2</p>
+						<p className="leading-[34px] text-[14px] mb-1 text-[#FF0000]">{props.data[0]?.size.toFixed(2)}</p>
+						<p className="leading-[34px] text-[14px] mb-1 text-[#00FF29]">{props.data[1]?.size.toFixed(2)}</p>
+						<p className="leading-[34px] text-[14px] mb-1 text-[#00FF29]">{props.data[2]?.size.toFixed(2)}</p>
+						<p className="leading-[34px] text-[14px] mb-1 text-[#FF0000]">{props.data[3]?.size.toFixed(2)}</p>
 					</div>
         </div>
 			</div>
