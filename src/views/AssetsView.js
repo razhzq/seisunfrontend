@@ -53,25 +53,8 @@ const AssetsView = () => {
         setCryptoData(data);
         setGraphData(graph);
       });
-    }, 2000)
+    }, 1000)
 
-    
-    // const myInterval = setInterval( (t)=> {
-    //   let data = [];
-    //   netType.map((e) => {
-    //     (async () => { 
-
-    //       let res = await axios.get(`https://api.polygon.io/v1/last/crypto/${e}/USD?apiKey=${apiKey}`);
-    //       data.push(res.data.last.price)
-    //       // /console.log('@@@@@@ - ', data);
-    //     })()
-    //   })
-    //   setCryptoData(data);
-    // }, 2000);
-
-    // return () => {
-    //   clearInterval(myInterval);
-    // }
   }, []);
 
   const settings = {
