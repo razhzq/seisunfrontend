@@ -54,7 +54,7 @@ const DetailView = () => {
 
 			<div className='block xl:hidden bg-white flex justify-center'>
 				<div className="overflow-hidden h-[700px]">
-					<div className='mt-[137px] w-[403px] text-left z-10 text-center relative'>
+					<div className='mt-[137px] w-[403px] text-left z-10 text-center relative ml-[12px]'>
 						<p className='uppercase font-bold text-black text-[45px] leading-[34px] text-left'>BONDING CURVE</p>
 						<p className='w-[365px] h-[187px] mt-[13px] font-normal font-medium text-[20px] leading-[34px] text-left'>Self-regulating mechanism for autonomous vault rebalancing to ensure price stability. Adjusts token supply in response to changes in protocol demand to accurately reflect token utility.</p>
 
