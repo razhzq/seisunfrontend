@@ -14,6 +14,7 @@ import "@fontsource/barlow/900-italic.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { StickyContainer, Sticky } from 'react-sticky';
+import FooterView from './views/FooterView';
 
 function App() {
 
@@ -28,6 +29,8 @@ function App() {
             <Route path="contacts" element={<Contact />} />
           </Routes>
         </BrowserRouter>
+
+        <FooterView></FooterView>
       </div>
   );
 }
