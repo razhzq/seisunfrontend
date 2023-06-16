@@ -14,12 +14,19 @@ const ContactMode = () => {
 	const [ github, setGitHub ] = useState('');
 
 	return (
-		<div className='container mx-auto py-[138px] px-[20px]'>
-			<p className='font-bold text-[40px] leading-[48px] uppercase text-white'>Contact Us</p>
+		<div className='container mx-auto py-[100px] md:py-[138px] px-[20px]'>
+			{mode == 0 &&
+				<p className='font-bold text-[40px] leading-[48px] uppercase text-white mb-[166px] hidden md:block'>Contact Us</p>
+			}
+
+			{mode != 0 &&
+				<p className='font-bold text-[40px] leading-[48px] uppercase text-white mb-[40px]'>Contact Us</p>
+			}
+
 			{
 				mode == 0 ? (
 					<div>
-						<div className='flex flex-col md:flex-row mt-[166px] gap-y-[66px]'>
+						<div className='flex flex-col md:flex-row  gap-y-[66px]'>
 							<input type="button" value="Investor" className='w-[335px] mx-auto py-[74px] py-[132px] px-[103px] bg-[#3E3A59] text-white rounded text-[32px] font-bold leading-[39px] rounded-[20px] cursor-pointer' onClick={() => setMode(1)}></input>
 							<input type="button" value="Contributor" className='w-[335px] mx-auto py-[74px] md:py-[132px] px-[103px] bg-[#3E3A59] text-white rounded text-[32px] font-bold leading-[39px] rounded-[20px] cursor-pointer' onClick={() => setMode(2)}></input>
 						</div>
@@ -69,6 +76,7 @@ const ContactMode = () => {
 					</div>
 				) : (
 					<div className='text-white bg-[#3E3A59] max-w-[669px] px-[10px] md:px-[35px] py-[50px] rounded-[20px] mx-auto mt-[54px]'>
+
 						<div className='flex w-full'>
 							<p className='text-left text-[16px] leading-[31px] font-bold flex-1'>Name/Company</p>
 							<input type="text" className='font-bold text-[16px] flex-1 leading-[31px] py-[7px] rounded-[10px] text-white bg-black pl-[10px] border-0' value={name} onChange={(e) => setName(e.target.value)} required></input>
