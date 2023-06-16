@@ -12,14 +12,14 @@ const DetailView = () => {
 			<div className="bg-white mx-auto relative overflow-hidden h-screen hidden xl:block">
 				<div className="container mx-auto flex flex-col xl:flex-row md:h-screen h-[974px]" >
 					<div className="flex-1 relative overflow-hidden h-screen">
-						<div className='absolute left-[20px] xl:left-[124px]  top-[87px] w-[403px] text-left z-10 text-center'>
-							<p className='uppercase font-bold text-black text-[45px] leading-[34px]'>BONDING CURVE</p>
-							<p className='w-[80%] ml-[38px] mt-[13px] font-normal font-medium text-[20px] leading-[34px]'>Self-regulating mechanism for autonomous vault rebalancing to ensure price stability. Adjusts token supply in response to changes in protocol demand to accurately reflect token utility.</p>
+						<div className='absolute left-[20px] xl:left-[124px]  top-[60px] w-[403px] text-left z-10 text-center'>
+							<p className='uppercase font-bold text-black text-[45px] leading-[34px] ml-[30px]'>BONDING CURVE</p>
+							<p className='w-[365px] ml-[38px] mt-[40px] font-normal font-medium text-[20px] leading-[34px] h-[187px]'>Self-regulating mechanism for autonomous vault rebalancing to ensure price stability. Adjusts token supply in response to changes in protocol demand to accurately reflect token utility.</p>
 
-							<button className="bg-[#1A1A1A] w-[105px] h-[32px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center font-bold items-center">LEARN MORE</button>
+							<button className="bg-[#1A1A1A] w-[105px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white ml-[160px] flex justify-center font-bold items-center mt-[4px]">LEARN MORE</button>
 						</div>
 
-						<div className="left-[20px] top-0 absolute w-[620px] hidden xl:block">
+						<div className="left-[30px] top-0 absolute w-[620px] hidden xl:block">
 							<img src={vines_left} alt=''></img>
 						</div>
 
@@ -29,15 +29,15 @@ const DetailView = () => {
 					</div>
 
 					<div className="flex-1 relative overflow-hidden h-screen">
-						<div className='absolute right-0 xl:right-[107px] top-0 xl:top-[95px] w-[383px] z-10 text-center'>
+						<div className='absolute right-0 xl:right-[127px] top-0 xl:top-[57px] w-[383px] z-10 text-center'>
 							<p className='uppercase font-bold text-black text-[45px] leading-[34px]'>PRICING NETWORK</p>
-							<p className='w-[365px] ml-[15px] mt-[19px] font-normal font-medium text-[20px] leading-[34px]'>Node operators creating consensus for on-chain pricing data for use by the community.</p>
+							<p className='w-[365px] h-[120px] mt-[41px] font-normal font-medium text-[20px] leading-[34px] h-[120px]'>Node operators creating consensus for on-chain pricing data for use by the community.</p>
 
-							<button className="bg-[#1A1A1A] w-[105px] h-[32px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center mt-[19px] font-bold items-center">LEARN MORE</button>
+							<button className="bg-[#1A1A1A] w-[105px] h-[32px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center mt-[32px] font-bold items-center">LEARN MORE</button>
 
 						</div>
 
-						<div className="right-[-188px] top-0 absolute w-[1009px] hidden xl:block">
+						<div className="right-[-78px] top-0 absolute w-[797px] h-[630px] hidden xl:block">
 							<img src={vines_right} alt=''></img>
 						</div>
 					</div>
@@ -56,7 +56,7 @@ const DetailView = () => {
 				<div className="overflow-hidden h-[700px]">
 					<div className='mt-[137px] w-[403px] text-left z-10 text-center relative'>
 						<p className='uppercase font-bold text-black text-[45px] leading-[34px] text-left'>BONDING CURVE</p>
-						<p className='w-[80%] ml-[38px] mt-[13px] font-normal font-medium text-[20px] leading-[34px] text-left ml-[20px]'>Self-regulating mechanism for autonomous vault rebalancing to ensure price stability. Adjusts token supply in response to changes in protocol demand to accurately reflect token utility.</p>
+						<p className='w-[365px] h-[187px] mt-[13px] font-normal font-medium text-[20px] leading-[34px] text-left'>Self-regulating mechanism for autonomous vault rebalancing to ensure price stability. Adjusts token supply in response to changes in protocol demand to accurately reflect token utility.</p>
 
 						<button className="bg-[#1A1A1A] w-[105px] h-[32px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center font-bold items-center">LEARN MORE</button>
 
@@ -69,14 +69,14 @@ const DetailView = () => {
 
 			<div className='block xl:hidden bg-white flex justify-center'>
 				<div className="overflow-hidden">
-					<div className='mt-[137px] w-[403px] text-left z-10 text-center relative h-[560px]'>
+					<div className='mt-[137px] w-[403px] text-left z-10 text-center relative h-[560px] ml-[12px]'>
 						<p className='uppercase font-bold text-black text-[45px] leading-[34px] text-left'>PRICING NETWORK</p>
-						<p className='w-[365px] ml-[15px] mt-[19px] font-normal font-medium text-[20px] leading-[34px] text-left ml-[20px]'>Node operators creating consensus for on-chain pricing data for use by the community.</p>
+						<p className='w-[365px] h-[120px] mt-[19px] font-normal font-medium text-[20px] leading-[34px] text-left'>Node operators creating consensus for on-chain pricing data for use by the community.</p>
 
-						<button className="bg-[#1A1A1A] w-[105px] h-[32px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center mt-[39px] ml-[60px] font-bold items-center">LEARN MORE</button>
+						<button className="bg-[#1A1A1A] w-[105px] h-[32px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white ml-[130px] flex justify-center mt-[19px] font-bold items-center">LEARN MORE</button>
 					
 						
-						<div className="right-[-100px] bottom-[0p2x] absolute w-[543px]">
+						<div className="right-[-156px] bottom-[-10px] absolute w-[543px] h-[440px]">
 							<img src={trees_bottom} alt=''></img>
 						</div>
 					</div>

@@ -105,7 +105,7 @@ const AssetsItem = (props) => {
 							props.name == "forex" && (
 								<div>
 									<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">CHG</p>
-						2			<p className="leading-[34px] text-[14px] mb-1" style={props.data[0] != undefined &&  parseFloat(props.data[0]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[0] != undefined ? parseFloat(props.data[0]["changes_24hrs"]).toFixed(2) : 0}</p>
+									<p className="leading-[34px] text-[14px] mb-1" style={props.data[0] != undefined &&  parseFloat(props.data[0]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[0] != undefined ? parseFloat(props.data[0]["changes_24hrs"]).toFixed(2) : 0}</p>
 									<p className="leading-[34px] text-[14px] mb-1" style={props.data[1] != undefined &&  parseFloat(props.data[1]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[1] != undefined ? parseFloat(props.data[1]["changes_24hrs"]).toFixed(2) : 0}</p>
 									<p className="leading-[34px] text-[14px] mb-1" style={props.data[2] != undefined &&  parseFloat(props.data[2]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[2] != undefined ? parseFloat(props.data[2]["changes_24hrs"].toFixed(2)) : 0}</p>
 									<p className="leading-[34px] text-[14px] mb-1" style={props.data[3] != undefined &&  parseFloat(props.data[3]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[3] != undefined ? parseFloat(props.data[3]["changes_24hrs"].toFixed(2)) : 0}</p>
