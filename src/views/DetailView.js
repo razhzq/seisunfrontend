@@ -76,7 +76,7 @@ const DetailView = () => {
 						<button className="bg-[#1A1A1A] w-[105px] h-[32px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center mt-[39px] ml-[60px] font-bold items-center">LEARN MORE</button>
 					
 						
-						<div className="right-[-100px] bottom-[0px] absolute w-[543px]">
+						<div className="right-[-100px] bottom-[0p2x] absolute w-[543px]">
 							<img src={trees_bottom} alt=''></img>
 						</div>
 					</div>
