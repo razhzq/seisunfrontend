@@ -32,7 +32,7 @@ const HeaderNav = () => {
 								<div className="bg-black fixed h-[100vh] w-full pl-8 z-50">
 									<div>
 										<a href="/docs" className='text-center flex font-bold text-[32px]  text-white uppercase'>DOCS</a>
-										<a href="/contact" className='text-center flex font-bold text-[32px]  text-white uppercase'>CONTACT</a>
+										<a href="/contacts" className='text-center flex font-bold text-[32px]  text-white uppercase'>CONTACT</a>
 										<a href="#" className='text-center flex font-bold text-[32px]  text-white uppercase'>TWITTER</a>
 										<a href="https://discord.com/invite/FbFjCz4PAR" className='w-[105px] text-center flex font-bold text-[32px]  text-white uppercase'>DISCORD</a>
 									</div>
