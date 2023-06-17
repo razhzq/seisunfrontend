@@ -3,16 +3,18 @@ import TradeView from './views/TradeView';
 import AssetsView from './views/AssetsView';
 import DetailView from './views/DetailView';
 import BenefitView from './views/BenefitView';
-import FooterView from './views/FooterView';
+import { isMobile } from 'react-device-detect';
 
 const Home = () => {
 
 		useEffect(() => {
-			const mybody = document.body;
-			mybody.style.overflowY = 'hidden';
-			setTimeout(() => {
-				mybody.style.overflowY = '';
-			}, 1500);
+			if(isMobile) {
+				const mybody = document.body;
+				mybody.style.overflowY = 'hidden';
+				setTimeout(() => {
+					mybody.style.overflowY = '';
+				}, 1500);
+			}
 		})
 
     return (
