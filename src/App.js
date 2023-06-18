@@ -1,6 +1,6 @@
 import HeaderNav from './components/HeaderNav';
 import Home from './Home';
-import Contact from './Contact';
+import Contact from './views/ContactView';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './App.css';
@@ -14,7 +14,7 @@ import "@fontsource/barlow/900-italic.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { StickyContainer, Sticky } from 'react-sticky';
-import FooterView from './views/FooterView';
+import Footer from './Footer';
 
 function App() {
 
@@ -30,7 +30,7 @@ function App() {
           </Routes>
         </BrowserRouter>
 
-        <FooterView></FooterView>
+        <Footer></Footer>
       </div>
   );
 }

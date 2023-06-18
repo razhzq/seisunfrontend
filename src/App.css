@@ -97,6 +97,10 @@
   width: fit-content !important;
 }
 
+.notification-container {
+  top: 50px !important;
+}
+
 @media only screen and (max-width: 640px) {
   .overlay {
     position:sticky;
