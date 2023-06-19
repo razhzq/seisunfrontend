@@ -52,35 +52,36 @@ const DetailView = () => {
 				</div>
 			</div>
 
-			<div className='block xl:hidden bg-white flex justify-center'>
+			<div className='block xl:hidden bg-white flex justify-center relative overflow-hidden'>
 				<div className="overflow-hidden h-[700px]">
-					<div className='mt-[137px] w-[403px] text-left z-10 text-center relative ml-[12px]'>
+					<div className='mt-[137px] w-[365px] text-left text-center'>
 						<p className='uppercase font-bold text-black text-[45px] leading-[34px] text-left'>BONDING CURVE</p>
-						<p className='w-[365px] h-[187px] mt-[13px] font-normal font-medium text-[20px] leading-[34px] text-left'>Self-regulating mechanism for autonomous vault rebalancing to ensure price stability. Adjusts token supply in response to changes in protocol demand to accurately reflect token utility.</p>
+						<p className='w-full h-[187px] mt-[13px] font-[400] text-[20px] leading-[34px] text-left'>Self-regulating mechanism for autonomous vault rebalancing to ensure price stability. Adjusts token supply in response to changes in protocol demand to accurately reflect token utility.</p>
 
-						<button className="bg-[#1A1A1A] w-[105px] h-[32px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center font-bold items-center">LEARN MORE</button>
-
-						<div className="right-[-270px] top-[-80px] absolute w-[741px]">
-							<img src={vines_top} alt=''></img>
-						</div>
+						<button className="bg-[#1A1A1A] w-[167px] h-[51px] rounded-[15px] leading-[34px] text-[18px] text-center uppercase text-white ml-[79px] flex justify-center font-bold items-center mt-[36px]">LEARN MORE</button>
 					</div>
+				</div>
+				
+				<div className="w-[960px] h-[630px] absolute">
+					<img src={vines_top} alt='' className='w-[935px] max-w-[960px]'></img>
 				</div>
 			</div>
 
-			<div className='block xl:hidden bg-white flex justify-center'>
-				<div className="overflow-hidden">
-					<div className='mt-[137px] w-[403px] text-left z-10 text-center relative h-[560px] ml-[12px]'>
+			<div className='block xl:hidden bg-white flex justify-center  overflow-hidden'>
+				<div className="overflow-hidden h-[700px] relative">
+					<div className='mt-[137px] w-[403px] text-left z-10 text-center  h-[560px] ml-[12px]'>
 						<p className='uppercase font-bold text-black text-[45px] leading-[34px] text-left'>PRICING NETWORK</p>
 						<p className='w-[365px] h-[120px] mt-[19px] font-normal font-medium text-[20px] leading-[34px] text-left'>Node operators creating consensus for on-chain pricing data for use by the community.</p>
 
-						<button className="bg-[#1A1A1A] w-[105px] h-[32px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white ml-[130px] flex justify-center mt-[19px] font-bold items-center">LEARN MORE</button>
-					
-						
-						<div className="right-[-156px] bottom-[-10px] absolute w-[543px] h-[440px]">
-							<img src={trees_bottom} alt=''></img>
-						</div>
+						<button className="bg-[#1A1A1A] w-[167px] h-[51px] rounded-[15px] leading-[34px] text-[18px] text-center uppercase text-white ml-[79px] flex justify-center font-bold items-center mt-[50px]">LEARN MORE</button>						
+					</div>
+
+					<div className="right-[-156px] bottom-[0px] absolute w-[543px] h-[440px]">
+						<img src={trees_bottom} alt=''></img>
 					</div>
 				</div>
+
+				
 			</div>
 		</div>
 	)

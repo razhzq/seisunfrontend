@@ -97,8 +97,8 @@ const ContactView = () => {
 				mode == 0 ? (
 					<div>
 						<div className='flex flex-col md:flex-row  gap-y-[66px]'>
-							<input type="button" value="Investor" className='w-[335px] mx-auto py-[74px] md:py-[132px] px-[103px] bg-[#3E3A59] text-white rounded text-[32px] font-bold leading-[39px] rounded-[20px] cursor-pointer' onClick={() => setMode(1)}></input>
-							<input type="button" value="Contributor" className='w-[335px] mx-auto py-[74px] md:py-[132px] px-[103px] bg-[#3E3A59] text-white rounded text-[32px] font-bold leading-[39px] rounded-[20px] cursor-pointer' onClick={() => setMode(2)}></input>
+							<input type="button" value="Investor" className='w-[335px] mx-auto py-[74px] md:py-[132px]  bg-[#3E3A59] text-white rounded text-[32px] font-bold leading-[39px] rounded-[20px] cursor-pointer' onClick={() => setMode(1)}></input>
+							<input type="button" value="Contributor" className='w-[335px] mx-auto py-[74px] md:py-[132px]  bg-[#3E3A59] text-white rounded text-[32px] font-bold leading-[39px] rounded-[20px] cursor-pointer' onClick={() => setMode(2)}></input>
 						</div>
 					</div>
 				) : mode ==1 ? 
