@@ -1,6 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import chart from '../assets/chart.png';
-import chart1 from '../assets/chart1.png';
+import Pattern from '../assets/chart1.png';
 import Chart from '../components/ChartItem';
 
 
@@ -13,6 +12,11 @@ const AssetsItem = (props) => {
 
 	return (
 		<div className='!mx-[5px] !m-auto !w-[342px] !h-[219px] border-white rounded-[6px] !bg-[#141217] p-[10px] relative border '>
+
+			<div className='w-full absolute bottom-[0px] left-0 right-0'>
+				<img src={Pattern}></img>
+			</div>
+					
 			<div className={`flip-card-inner ${isFlip ? 'card-rotate': ''}`} onClick={() => setIsFlip(!isFlip)}>
 				<div className="flip-card-front">
 					<div className="flex justify-between font-black text-white text-[34px] leading-[34px] !mr-0">
@@ -22,7 +26,7 @@ const AssetsItem = (props) => {
 						<p className='flex items-center uppercase font-[900] text-[34px] leading-[34px] uppercase'>{props.name}</p>
 					</div>2
 					<div className='!w-full h-[157px] absolute bottom-0 left-0 right-0 !mr-0'>
-						<img src={chart1} className="w-full"></img>
+						{/* <img src={chart1} className="w-full"></img> */}
 
 						<div className='absolute bottom-[8px] flex justify-between left-0 right-0'>
 							<div>
@@ -55,7 +59,8 @@ const AssetsItem = (props) => {
 					</div>
 				</div>
 
-				<div className="flip-card-back flex flex-row justify-between">
+				<div className="flip-card-back flex flex-row justify-between relative">
+
           <div>
 						<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">PAIR</p>
 						<p className="leading-[34px] text-[14px] mb-1">BTC/DAI</p>
