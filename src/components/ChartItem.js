@@ -26,7 +26,7 @@ const Chart = ({ data /* see data tab */ }) => (
 						id: 'gradient',
 						type: 'linearGradient',
 						colors: [
-							{ offset: 0, color: '#ff0000' },
+							{ offset: 0, color: '#FF0000' },
 							{ offset: 100, color: '#000000' },
 						],
 					},

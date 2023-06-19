@@ -103,7 +103,7 @@ const AssetsView = () => {
           <p className="text-white font-bold text-[45px] leading-[45px] text-center uppercase block md:hidden ">Discover Tradable Assets</p>
           <p className="mt-[5px] text-[#EDEDED] font-[300] text-[16px] leading-[17px] text-center uppercase block md:hidden ">Leverage trade crypto, stocks, and forex.</p>
 
-          <div className="border border-white w-[327px] border-opacity-50 mx-auto mt-[10px] md:mt-[33px]"></div>
+          <div className="border border-white w-[290px] min-[390px]:w-[327px] border-opacity-50 mx-auto mt-[10px] md:mt-[33px]"></div>
 
           <section className="center slider mt-[19px] flip-card">
             <Slider {...settings}>
@@ -114,7 +114,7 @@ const AssetsView = () => {
             </Slider>
           </section>
 
-          <div className="border border-white w-[327px] border-opacity-50 mx-auto mt-[19px] block md:hidden"></div>
+          <div className="border border-white w-[290px] min-[390px]:w-[327px] border-opacity-50 mx-auto mt-[19px] block md:hidden"></div>
 
         </div>
       </div>

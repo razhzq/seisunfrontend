@@ -10,9 +10,8 @@ const AssetsItem = (props) => {
 	const [ change, setChange ] = useState([]);
 
 	return (
-		<div className='!mx-[5px] !m-auto !w-[342px] !h-[219px] border-white rounded-[6px] !bg-[#141217] p-[10px] relative border '>
+		<div className='!mx-[5px] !m-auto !w-[310px] min-[390px]:!w-[342px] !h-[219px] border-white rounded-[6px] !bg-[#141217] min-[390px]:p-[10px] p-[7px] relative border '>
 
-			
 			<div className='w-full absolute bottom-[0px] left-0 right-0'>
 				<img src={Pattern}></img>
 			</div>
@@ -21,7 +20,7 @@ const AssetsItem = (props) => {
 				<ReactCardFlip isFlipped={isFlip} flipDirection="horizontal">
 					<div onClick={() => setIsFlip(!isFlip)} className='relative !h-[199px]'>
 						<div className="flex justify-between font-black text-white text-[34px] leading-[34px] !mr-0">
-							<div className="w-[170px] h-[100px]">
+							<div className="w-[154px] h-[118px]">
 								<Chart data={props.graph} className="w-full h-full"></Chart>
 							</div>
 							<p className='flex items-center uppercase font-[900] text-[34px] leading-[34px] uppercase'>{props.name}</p>
