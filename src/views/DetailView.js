@@ -53,23 +53,25 @@ const DetailView = () => {
 			</div>
 
 			<div className='block xl:hidden bg-white flex justify-center relative overflow-hidden'>
-				<div className="overflow-hidden h-[700px]">
-					<div className='mt-[137px] w-[365px] text-left text-center'>
+				<div className="overflow-hidden h-[700px] w-[428px]">
+					<div className='mt-[137px] w-[365px] text-left text-center ml-[30px]'>
 						<p className='uppercase font-bold text-black text-[45px] leading-[34px] text-left'>BONDING CURVE</p>
 						<p className='w-full h-[187px] mt-[13px] font-[400] text-[20px] leading-[34px] text-left'>Self-regulating mechanism for autonomous vault rebalancing to ensure price stability. Adjusts token supply in response to changes in protocol demand to accurately reflect token utility.</p>
 
 						<button className="bg-[#1A1A1A] w-[167px] h-[51px] rounded-[15px] leading-[34px] text-[18px] text-center uppercase text-white ml-[79px] flex justify-center font-bold items-center mt-[36px]">LEARN MORE</button>
 					</div>
+
+					<div className="w-[428px] absolute top-[140px]">
+						<img src={vines_top} alt=''></img>
+					</div>
 				</div>
 				
-				<div className="w-[960px] h-[630px] absolute">
-					<img src={vines_top} alt='' className='w-[935px] max-w-[960px]'></img>
-				</div>
+				
 			</div>
 
 			<div className='block xl:hidden bg-white flex justify-center  overflow-hidden'>
 				<div className="overflow-hidden h-[700px] relative">
-					<div className='mt-[137px] w-[403px] text-left z-10 text-center  h-[560px] ml-[12px]'>
+					<div className='mt-[137px] w-[403px] text-left z-10 text-center  h-[560px] ml-[30px]'>
 						<p className='uppercase font-bold text-black text-[45px] leading-[34px] text-left'>PRICING NETWORK</p>
 						<p className='w-[365px] h-[120px] mt-[19px] font-normal font-medium text-[20px] leading-[34px] text-left'>Node operators creating consensus for on-chain pricing data for use by the community.</p>
 
