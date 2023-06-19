@@ -33,7 +33,7 @@ const DetailView = () => {
 							<p className='uppercase font-bold text-black text-[45px] leading-[34px]'>PRICING NETWORK</p>
 							<p className='w-[365px] h-[120px] mt-[41px] font-normal font-medium text-[20px] leading-[34px] h-[120px]'>Node operators creating consensus for on-chain pricing data for use by the community.</p>
 
-							<button className="bg-[#1A1A1A] w-[105px] h-[32px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center mt-[32px] font-bold items-center">LEARN MORE</button>
+							<button className="bg-[#1A1A1A] w-[105px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center mt-[32px] font-bold items-center">LEARN MORE</button>
 
 						</div>
 
