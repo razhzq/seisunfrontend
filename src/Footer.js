@@ -5,6 +5,7 @@ import discord from './assets/Footer/discord.svg';
 import twitter from './assets/Footer/twitter.svg';
 
 const Footer = () => {
+	
 	return (
 		<div className="bg-[url('./assets/footer_mobile.png')] md:bg-[url('./assets/Footer/footer.png')] bg-cover bg-center h-[822px] flex flex-col justify-center items-center h-screen relative">
 
@@ -15,7 +16,7 @@ const Footer = () => {
 				<div><img src={Logo} className='mx-auto w-[84px] h-[84px]' alt=''></img></div>
 				<div className='flex flex-row items-center mt-[25px] justify-center'>
 					<a href="#"><img src={medium} alt='' className='w-[58px] h-[58px]'></img></a>
-					<a href="https://discord.com/invite/FbFjCz4PAR" className='ml-[20px]'><img src={discord} alt='' className='w-[42px] h-[42px]'></img></a>
+					<a href="https://discord.com/invite/FbFjCz4PAR" className='ml-[10px]'><img src={discord} alt='' className='w-[42px] h-[42px]'></img></a>
 					<a href="#"><img src={twitter} alt='' className='ml-[23px] w-[40px] h-[34px]'></img></a>
 				</div>
 

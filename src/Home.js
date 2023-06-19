@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import TradeView from './views/TradeView';
 import AssetsView from './views/AssetsView';
 import DetailView from './views/DetailView';
 import BenefitView from './views/BenefitView';
 import { isMobile } from 'react-device-detect';
 
+
 const Home = () => {
+
+	const [flip, setFlip] = useState(false);
 
 		useEffect(() => {
 			if(isMobile) {
