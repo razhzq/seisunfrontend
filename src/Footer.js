@@ -20,8 +20,8 @@ const Footer = () => {
 				</div>
 
 				<div className="flex flex-row justify-between w-[208px] mt-[6px]">
-					<a href="/docs" className="text-white text-[18px] leading-[22px] font-[800] uppercase flex-none order-none grow-0">DOCS</a>
-					<a href="/contacts" className="text-white text-[18px] leading-[22px] font-[800] uppercase flex-none order-none grow-0">contact us</a>
+					<a href="/docs" className="text-[#F9F9FB] text-[18px] leading-[22px] font-[800] uppercase flex-none order grow-0">DOCS</a>
+					<a href="/contacts" className="text-[#F9F9FB] text-[18px] leading-[22px] font-[800] uppercase flex-none order grow-0">contact us</a>
 				</div>
 				
 			</div>
