@@ -47,14 +47,20 @@
   display: block !important;
   width: 100%;
 }
+
+.logos .slick-list .slick-track {
+  justify-content: space-around;
+}
+
 .logos .slick-slide div {
   width: auto;
   margin-right: 10px;
 }
-.logos .slick-slide img {
+
+/* .logos .slick-slide img {
   width: fit-content !important;
   height: fit-content;
-}
+} */
 
 .logos .slick-track {
   display: flex !important;
