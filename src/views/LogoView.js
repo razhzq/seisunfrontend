@@ -55,11 +55,11 @@ const LogoView = () => {
       <section className="center slider">
         <div>
           <Slider {...settings}>
-						<img className="!w-[274px] !h-[74px]" src={arbitrum} alt="" />
-						<img className="trending-img !w-[191px] h-[39px]" src={polygon} alt="" />
-						<img className="trending-img !w-[204px] h-[56px]" src={zksync} alt="" />
-						<img className="trending-img !w-[195px] h-[61px]" src={chainlink} alt="" />
-						<img className="trending-img !w-[250px] h-[145px]" src={marker} alt="" />
+						<img className="!w-[251.77px] !h-[51px]" src={arbitrum} alt="" />
+						<img className="!w-[186px] h-[39.11px]" src={polygon} alt="" />
+						<img className="!w-[196px] h-[38.32px]" src={zksync} alt="" />
+						<img className="!w-[191.53px] h-[58.84px]" src={chainlink} alt="" />
+						<img className="!w-[199px] h-[35.12px]" src={marker} alt="" />
 					</Slider>
         </div>
       </section>

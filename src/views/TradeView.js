@@ -11,7 +11,7 @@ const TradeView = () => {
 					<a href="https://discord.com/invite/FbFjCz4PAR" className="border bg-[#0E0716] border-[#AEAEAE] border-opacity-80 rounded-[10px] text-white w-[184px] p-[12px] font-bold leading-[34px] uppercase mt-[88px] 2md:mt-[35px]">JOIN DISCORD</a>
 				</div>
 
-				<div className="absolute bottom-[-27px] left-0 h-[145px] right-0 trasparent">
+				<div className="absolute bottom-[0px] left-0 h-[80px] right-0 trasparent">
 					<LogoView></LogoView>
 				</div>
 			</div>

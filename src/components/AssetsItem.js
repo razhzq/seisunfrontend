@@ -123,10 +123,6 @@ const AssetsItem = (props) => {
 				</ReactCardFlip>
 			</div>
 			
-			
-			{/* <div className='w-[600px] h-[400px]'>
-				<Chart data={data} ></Chart>
-			</div> */}
 		</div>
 	)
 }
