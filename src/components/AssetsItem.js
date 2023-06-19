@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import Pattern from '../assets/chart1.png';
+import Pattern from '../assets/pattern.png';
 import Chart from '../components/ChartItem';
 
 

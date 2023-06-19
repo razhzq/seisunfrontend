@@ -106,12 +106,6 @@
     position:sticky;
     position:-webkit-sticky;
     top: 0;
-    /* scroll-behavior: smooth;
-    transition-duration: 1s;
-    -webkit-overflow-scrolling: none;
-    scroll-snap-type: y mandatory;
-    scroll-snap-align: start; */
-    /* min-height:50vh; */
   }
 
 }

@@ -1,5 +1,9 @@
 import React from 'react';
-import logo from '../assets/logo.png';
+import APED_LOGO from '../assets/Header/logo.svg';
+import APED_A from '../assets/Header/A.svg';
+import APED_P from '../assets/Header/P.svg';
+import APED_E from '../assets/Header/E.svg';
+import APED_D from '../assets/Header/D.svg';
 
 const HeaderNav = () => {
 	const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -9,7 +13,14 @@ const HeaderNav = () => {
 			<nav>
 				<div className={` flex flex-wrap items-center justify-between ${navbarOpen ? 'pr-4': 'px-4'}`}>
 					<a href="/" className={`flex items-center ${navbarOpen ? 'invisible' : 'visible'}`}>
-						<img src={logo} className="h-8 mr-3" alt="APED" />
+						<img src={APED_LOGO} className="w-[113px] h-[37.43px]" alt="APED" />
+
+						{/* <div class="mt-[13.87px] flex">
+							<img src={APED_A} className='ml-[5.14px] w-[19.73px] h-[20.57px]' alt="APED" />
+							<img src={APED_P} className='ml-[1.74px] w-[15.4px] h-[20.57px]' alt="APED" />
+							<img src={APED_E} className='ml-[2.92px] w-[15.3px] h-[20.55px]' alt="APED" />
+							<img src={APED_D} className='ml-[3.09px] w-[16.67px] h-[20.6px]' alt="APED" />
+						</div> */}
 					</a>
 					<button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden dark:text-gray-400" aria-controls="navbar-default" aria-expanded="false" onClick={() => setNavbarOpen(!navbarOpen)}>
 						<span className="sr-only">Open main menu</span>
