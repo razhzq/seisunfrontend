@@ -54,11 +54,11 @@ const DetailView = () => {
 
 			<div className='block xl:hidden bg-white flex justify-center relative overflow-hidden'>
 				<div className="overflow-hidden h-[700px] w-[428px]">
-					<div className='mt-[62px] w-[365px] text-left text-center ml-[30px]'>
-						<p className='uppercase font-bold text-black text-[45px] leading-[34px] text-left'>BONDING CURVE</p>
-						<p className='w-full h-[187px] mt-[13px] font-[400] text-[20px] leading-[34px] text-left'>Self-regulating mechanism for autonomous vault rebalancing to ensure price stability. Adjusts token supply in response to changes in protocol demand to accurately reflect token utility.</p>
+					<div className='mt-[62px] w-full text-left text-center px-[30px]'>
+						<p className='uppercase font-bold text-black text-[30px] min-[428px]:text-[45px] leading-[34px] text-left'>BONDING CURVE</p>
+						<p className='w-full mt-[13px] font-[400] text-[20px] leading-[34px] text-left'>Self-regulating mechanism for autonomous vault rebalancing to ensure price stability. Adjusts token supply in response to changes in protocol demand to accurately reflect token utility.</p>
 
-						<button className="bg-[#1A1A1A] w-[167px] h-[51px] rounded-[15px] leading-[34px] text-[18px] text-center uppercase text-white ml-[79px] flex justify-center font-bold items-center mt-[36px]">LEARN MORE</button>
+						<button className="bg-[#1A1A1A] w-[167px] h-[51px] rounded-[15px] leading-[34px] text-[18px] text-center uppercase text-white ml-[30px] min-[428px]:ml-[79px] flex justify-center font-bold items-center mt-[36px]">LEARN MORE</button>
 					</div>
 
 					<div className="w-[428px] absolute top-[140px]">
@@ -71,14 +71,16 @@ const DetailView = () => {
 
 			<div className='block xl:hidden bg-white flex justify-center  overflow-hidden'>
 				<div className="overflow-hidden h-[570px] relative">
-					<div className='mt-[30px] w-[403px] text-left z-10 text-center  h-[570px] ml-[30px]'>
-						<p className='uppercase font-bold text-black text-[45px] leading-[34px] text-left'>PRICING NETWORK</p>
-						<p className='w-[365px] h-[120px] mt-[19px] font-normal font-medium text-[20px] leading-[34px] text-left'>Node operators creating consensus for on-chain pricing data for use by the community.</p>
+					<div className='mt-[30px] w-full text-left z-10 text-center pl-[30px] pr-[14px]'>
+						<p className='uppercase font-bold text-black text-[30px] min-[428px]:text-[45px] leading-[34px] text-left'>PRICING NETWORK</p>
+					</div>
+					<div className='mt-[19px] w-full text-left z-10 text-center  h-[570px] px-[30px]'>
+						<p className='w-full mt-[19px] font-normal font-medium text-[20px] leading-[34px] text-left'>Node operators creating consensus for on-chain pricing data for use by the community.</p>
 
-						<button className="bg-[#1A1A1A] w-[167px] h-[51px] rounded-[15px] leading-[34px] text-[18px] text-center uppercase text-white ml-[79px] flex justify-center font-bold items-center mt-[50px]">LEARN MORE</button>						
+						<button className="bg-[#1A1A1A] w-[167px] h-[51px] rounded-[15px] leading-[34px] text-[18px] text-center uppercase text-white ml-[30px] min-[428px]:ml-[79px] flex justify-center font-bold items-center mt-[50px]">LEARN MORE</button>						
 					</div>
 
-					<div className="right-[-176px] top-[130px] absolute w-[543px] h-[440px]">
+					<div className="right-[-220px] min-[428px]:right-[-176px] top-[170px] min-[428px]:top-[130px] absolute w-[543px] h-[440px]">
 						<img src={trees_bottom} alt=''></img>
 					</div>
 				</div>

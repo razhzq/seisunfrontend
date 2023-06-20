@@ -24,7 +24,7 @@ const BenefitView = () => {
 				<p className='text-white font-bold text-[40px] leading-[40px] uppercase tracking-wider tracking-[.045em] block md:hidden'>Why APED</p>
 			</div>
 
-      <div className="visible lg:invisible border border-white w-[327px] border-opacity-50 mx-auto mt-[33px]"></div>
+      <div className="visible lg:invisible border border-white w-[290px] min-[390px]:w-[327px] border-opacity-50 mx-auto mt-[33px]"></div>
 
 			<div className="mt-[33px] px-4 gap-x-[110px] gap-y-[33px] justify-center bg-black bg-opacity-15 flex flex-wrap">
 				{
@@ -34,7 +34,7 @@ const BenefitView = () => {
 				}
 			</div>
 
-      <div className="visible lg:invisible border border-white w-[327px] border-opacity-50 mx-auto mt-[33px]"></div>
+      <div className="visible lg:invisible border border-white w-[290px] min-[390px]:w-[327px] border-opacity-50 mx-auto mt-[33px]"></div>
 
 		</div>
 	)

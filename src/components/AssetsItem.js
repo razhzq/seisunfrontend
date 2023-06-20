@@ -26,7 +26,6 @@ const AssetsItem = (props) => {
 							<p className='flex items-center uppercase font-[900] text-[34px] leading-[34px] uppercase'>{props.name}</p>
 						</div>
 						<div className='!w-full h-[157px] absolute bottom-0 left-0 right-0 !mr-0'>
-							{/* <img src={chart1} className="w-full"></img> */}
 
 							<div className='absolute bottom-[8px] flex justify-between left-0 right-0'>
 								<div>
