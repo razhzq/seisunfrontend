@@ -32,7 +32,7 @@ const HeaderNav = () => {
 							!navbarOpen ? (
 								<div className="bg-black flex flex-row gap-[30px]">
 									<li className='w-[105px] text-center h-[32px] border-[#AEAEAE] border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase'>
-										<a href="/docs" className="text-white">docs</a>
+										<a href="https://aped-xyz.gitbook.io/litepaper" className="text-white">docs</a>
 									</li>
 										
 									<li className='w-[105px] text-center text-[16px] border-[#AEAEAE] border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase'>
@@ -42,7 +42,7 @@ const HeaderNav = () => {
 							) : (
 								<div className="bg-black fixed h-[100vh] w-full pl-8 z-50">
 									<div>
-										<a href="/docs" className='text-center flex font-bold text-[32px]  text-white uppercase'>DOCS</a>
+										<a href="https://aped-xyz.gitbook.io/litepaper" className='text-center flex font-bold text-[32px]  text-white uppercase'>DOCS</a>
 										<a href="/contacts" className='text-center flex font-bold text-[32px]  text-white uppercase'>CONTACT</a>
 										<a href="#" className='text-center flex font-bold text-[32px]  text-white uppercase'>TWITTER</a>
 										<a href="https://discord.com/invite/FbFjCz4PAR" className='w-[105px] text-center flex font-bold text-[32px]  text-white uppercase'>DISCORD</a>

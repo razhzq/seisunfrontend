@@ -58,7 +58,7 @@ const DetailView = () => {
 						<p className='uppercase font-bold text-black text-[30px] min-[428px]:text-[45px] leading-[34px] text-left'>BONDING CURVE</p>
 						<p className='w-full mt-[13px] font-[400] text-[20px] leading-[34px] text-left'>Self-regulating mechanism for autonomous vault rebalancing to ensure price stability. Adjusts token supply in response to changes in protocol demand to accurately reflect token utility.</p>
 
-						<button className="bg-[#1A1A1A] w-[167px] h-[51px] rounded-[15px] leading-[34px] text-[18px] text-center uppercase text-white ml-[30px] min-[428px]:ml-[79px] flex justify-center font-bold items-center mt-[36px]">LEARN MORE</button>
+						<a href="https://aped-xyz.gitbook.io/litepaper/economic-structure/bonding-curve" className="bg-[#1A1A1A] w-[167px] h-[51px] rounded-[15px] leading-[34px] text-[18px] text-center uppercase text-white ml-[30px] min-[428px]:ml-[79px] flex justify-center font-bold items-center mt-[36px]">LEARN MORE</a>
 					</div>
 
 					<div className="w-[428px] absolute top-[140px]">
@@ -77,7 +77,7 @@ const DetailView = () => {
 					<div className='mt-[19px] w-full text-left z-10 text-center  h-[570px] px-[30px]'>
 						<p className='w-full mt-[19px] font-normal font-medium text-[20px] leading-[34px] text-left'>Node operators creating consensus for on-chain pricing data for use by the community.</p>
 
-						<button className="bg-[#1A1A1A] w-[167px] h-[51px] rounded-[15px] leading-[34px] text-[18px] text-center uppercase text-white ml-[30px] min-[428px]:ml-[79px] flex justify-center font-bold items-center mt-[50px]">LEARN MORE</button>						
+						<a href="https://aped-xyz.gitbook.io/litepaper/oracles/aped-network"className="bg-[#1A1A1A] w-[167px] h-[51px] rounded-[15px] leading-[34px] text-[18px] text-center uppercase text-white ml-[30px] min-[428px]:ml-[79px] flex justify-center font-bold items-center mt-[50px]">LEARN MORE</a>						
 					</div>
 
 					<div className="right-[-220px] min-[428px]:right-[-176px] top-[170px] min-[428px]:top-[130px] absolute w-[543px] h-[440px]">
