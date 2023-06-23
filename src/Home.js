@@ -7,9 +7,6 @@ import { isMobile } from 'react-device-detect';
 
 
 const Home = () => {
-
-	const [flip, setFlip] = useState(false);
-
 		useEffect(() => {
 			if(isMobile) {
 				const mybody = document.body;

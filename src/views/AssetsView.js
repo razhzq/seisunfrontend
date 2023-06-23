@@ -3,51 +3,31 @@ import Slider from 'react-slick';
 import AssetsItem from '../components/AssetsItem';
 import axios from 'axios';
 
-const data = [
-  {
-    "btc": 12.32,
-  },
-  {
-    "btc": 320.32,
-  },
-  {
-    "btc": 80.32,
-  },
-	{
-    "btc": 422.12,
-  },
-	{
-    "btc": 324.84,
-  },
-	{
-    "btc": 122.327,
-  },
-	{
-    "btc": 46.82,
-  },
-	{
-    "btc": 46.0,
-  },
-	{
-    "btc": 68.23,
-  },
-];
+let cryptoChg = [];
+let forexChg = [];
+let forexData = [];
 
 const AssetsView = () => {
-  const [ apiKey, setApiKey ] = useState('1ipWpOtJ0MyGTnMppG9sLWdW6mCxdtwe');
   const [ netType, setNetType ] = useState(['BTC', 'SOL', 'ETH', 'DOT']);
   const [ cryptoData, setCryptoData ] = useState([]);
-  const [ forex, setForexData ] = useState([]);
-  const [ graphData, setGraphData ] = useState(data);
 
   useEffect(() => {
     const myInterval = setInterval( (t)=> {
       (async () => {
-        const rep = await axios.get(`https://api2.aped.xyz/cryptos`);
-        setCryptoData(rep.data);
+      
+        const rep2 = await axios.get(`https://api2.aped.xyz/forex`);
+        forexData = rep2.data
+        // setForexData(rep2.data);
 
-        const rep1 = await axios.get(`https://api2.aped.xyz/forex`);
-        setForexData(rep1.data);
+        const ch1 = await axios.get(`https://api2.aped.xyz/cryptos/dailychange`);
+        cryptoChg.push(ch1.data.cryptoDailyChange);
+        cryptoChg = cryptoChg.slice(-20);
+        const ch2 = await axios.get(`https://api2.aped.xyz/forex/dailychange`);
+        forexChg.push(ch1.data.cryptoDailyChange);
+        forexChg = forexChg.slice(-20);
+
+        const rep1 = await axios.get(`https://api2.aped.xyz/cryptos`);
+        setCryptoData(rep1.data);
       })();
     }, 1000)
 
@@ -107,10 +87,10 @@ const AssetsView = () => {
 
           <section className="center slider mt-[19px] flip-card">
             <Slider {...settings}>
-              <AssetsItem name="crypto" data={cryptoData} graph={graphData}></AssetsItem>
-              <AssetsItem name="forex" data={forex} graph={graphData}></AssetsItem>
-              <AssetsItem name="stocks" data={cryptoData} graph={graphData}></AssetsItem>
-              <AssetsItem name="defi" data={cryptoData} graph={graphData}></AssetsItem>
+              <AssetsItem name="crypto" data={cryptoData} dailyChange={cryptoChg}></AssetsItem>
+              <AssetsItem name="forex" data={forexData} dailyChange={forexChg}></AssetsItem>
+              <AssetsItem name="stocks" data={cryptoData} dailyChange={cryptoChg}></AssetsItem>
+              <AssetsItem name="defi" data={cryptoData} dailyChange={forexChg}></AssetsItem>
             </Slider>
           </section>
 

@@ -8,6 +8,15 @@ const AssetsItem = (props) => {
 	const [ data, setData ] = useState([]);
 	const [ price, setPrice ] = useState([]);
 	const [ change, setChange ] = useState([]);
+	const chg = props.dailyChange;
+	
+	const valueRange = Math.max(...chg) - Math.min(...chg);
+	const normalizedValues = chg.map(value => (value - Math.min(...chg)) / valueRange);
+	const factor = 100;
+	const graphData = normalizedValues.map(value => { return {'btc': value * factor}});
+
+	let len = chg.length;
+	let percent = len >= 2 ? (parseFloat(chg[len-1] * 100 / chg[len-2]) - 100).toFixed(4) : 0;
 
 	return (
 		<div className='!mx-[5px] !m-auto !w-[310px] min-[390px]:!w-[342px] !h-[219px] border-white rounded-[6px] !bg-[#141217] min-[390px]:p-[10px] p-[7px] relative border '>
@@ -21,7 +30,9 @@ const AssetsItem = (props) => {
 					<div onClick={() => setIsFlip(!isFlip)} className='relative !h-[199px]'>
 						<div className="flex justify-between font-black text-white text-[34px] leading-[34px] !mr-0">
 							<div className="w-[154px] h-[118px]">
-								<Chart data={props.graph} className="w-full h-full"></Chart>
+								{
+									graphData.length > 5 && <Chart data={graphData} className="w-full h-full"></Chart>
+								}
 							</div>
 							<p className='flex items-center uppercase font-[900] text-[34px] leading-[34px] uppercase'>{props.name}</p>
 						</div>
@@ -35,8 +46,18 @@ const AssetsItem = (props) => {
 										</div>
 										
 										<div className="flex items-center">
-											<div className="w-0 h-0 border-[5px] border-t-[#FF0000] border-l-transparent border-r-transparent border-b-transparent mt-[5px] ml-[15px]"></div>
-											<p className="text-[red] uppercase text-[18px] font-[400] leading-[34px]">13%</p>
+											{
+												percent >=0 ? 
+												<>
+													<div className="w-0 h-0 border-[5px] border-b-[#00FF00] border-l-transparent border-r-transparent border-t-transparent mt-[-2.5px] ml-[15px]"></div>
+													<p className="text-[#00FF29] uppercase text-[18px] font-[400] leading-[34px]">{percent}%</p>
+												</>
+												:
+												<>
+													<div className="w-0 h-0 border-[5px] border-t-[#FF0000] border-l-transparent border-r-transparent border-b-transparent mb-[-9px] ml-[15px]"></div>
+													<p className="text-[red] uppercase text-[18px] font-[400] leading-[34px]">{percent}%</p>
+												</>
+											}
 										</div>
 									</div>
 
@@ -85,10 +106,10 @@ const AssetsItem = (props) => {
 								props.name == "forex" && (
 									<div>
 										<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">PRICE</p>
-										<p className="leading-[34px] text-[14px] mb-1">{props.data[0] != undefined ? parseFloat(props.data[0]["EUR/USD"]).toFixed(2) : '0'}</p>
-										<p className="leading-[34px] text-[14px] mb-1">{props.data[1] != undefined ? parseFloat(props.data[1]["AUD/USD"]).toFixed(2) : '0'}</p>
-										<p className="leading-[34px] text-[14px] mb-1">{props.data[2] != undefined ? parseFloat(props.data[2]["GBP/USD"]).toFixed(2) : '0'}</p>
-										<p className="leading-[34px] text-[14px] mb-1">{props.data[3] != undefined ? parseFloat(props.data[3]["CNH/USD"]).toFixed(2) : '0'}</p>
+										<p className="leading-[34px] text-[14px] mb-1">{props.data[0] != undefined ? parseFloat(props.data[0]["EUR/USD"]).toFixed(4) : '0'}</p>
+										<p className="leading-[34px] text-[14px] mb-1">{props.data[1] != undefined ? parseFloat(props.data[1]["AUD/USD"]).toFixed(4) : '0'}</p>
+										<p className="leading-[34px] text-[14px] mb-1">{props.data[2] != undefined ? parseFloat(props.data[2]["GBP/USD"]).toFixed(4) : '0'}</p>
+										<p className="leading-[34px] text-[14px] mb-1">{props.data[3] != undefined ? parseFloat(props.data[3]["CNH/USD"]).toFixed(4) : '0'}</p>
 									</div>
 								)
 							}
@@ -109,10 +130,10 @@ const AssetsItem = (props) => {
 								props.name == "forex" && (
 									<div>
 										<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">CHG</p>
-										<p className="leading-[34px] text-[14px] mb-1" style={props.data[0] != undefined &&  parseFloat(props.data[0]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[0] != undefined ? parseFloat(props.data[0]["changes_24hrs"]).toFixed(2) : 0}</p>
-										<p className="leading-[34px] text-[14px] mb-1" style={props.data[1] != undefined &&  parseFloat(props.data[1]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[1] != undefined ? parseFloat(props.data[1]["changes_24hrs"]).toFixed(2) : 0}</p>
-										<p className="leading-[34px] text-[14px] mb-1" style={props.data[2] != undefined &&  parseFloat(props.data[2]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[2] != undefined ? parseFloat(props.data[2]["changes_24hrs"].toFixed(2)) : 0}</p>
-										<p className="leading-[34px] text-[14px] mb-1" style={props.data[3] != undefined &&  parseFloat(props.data[3]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[3] != undefined ? parseFloat(props.data[3]["changes_24hrs"].toFixed(2)) : 0}</p>
+										<p className="leading-[34px] text-[14px] mb-1" style={props.data[0] != undefined &&  parseFloat(props.data[0]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[0] != undefined ? parseFloat(props.data[0]["changes_24hrs"]).toFixed(4) : 0}</p>
+										<p className="leading-[34px] text-[14px] mb-1" style={props.data[1] != undefined &&  parseFloat(props.data[1]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[1] != undefined ? parseFloat(props.data[1]["changes_24hrs"]).toFixed(4) : 0}</p>
+										<p className="leading-[34px] text-[14px] mb-1" style={props.data[2] != undefined &&  parseFloat(props.data[2]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[2] != undefined ? parseFloat(props.data[2]["changes_24hrs"].toFixed(4)) : 0}</p>
+										<p className="leading-[34px] text-[14px] mb-1" style={props.data[3] != undefined &&  parseFloat(props.data[3]["changes_24hrs"]) >= 0 ? {color: '#00FF29'}: {color: '#FF0000'}}>{props.data[3] != undefined ? parseFloat(props.data[3]["changes_24hrs"].toFixed(4)) : 0}</p>
 									</div>
 								)
 							}
