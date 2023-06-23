@@ -21,10 +21,10 @@ const AssetsView = () => {
 
         const ch1 = await axios.get(`https://api2.aped.xyz/cryptos/dailychange`);
         cryptoChg.push(ch1.data.cryptoDailyChange);
-        cryptoChg = cryptoChg.slice(-20);
+        cryptoChg = cryptoChg.slice(-10);
         const ch2 = await axios.get(`https://api2.aped.xyz/forex/dailychange`);
         forexChg.push(ch1.data.cryptoDailyChange);
-        forexChg = forexChg.slice(-20);
+        forexChg = forexChg.slice(-10);
 
         const rep1 = await axios.get(`https://api2.aped.xyz/cryptos`);
         setCryptoData(rep1.data);
