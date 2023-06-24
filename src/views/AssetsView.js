@@ -14,20 +14,25 @@ const AssetsView = () => {
   useEffect(() => {
     const myInterval = setInterval( (t)=> {
       (async () => {
+        try{
+          const rep2 = await axios.get(`https://api2.aped.xyz/forex`);
+          forexData = rep2.data
+          // setForexData(rep2.data);
+  
+          const ch1 = await axios.get(`https://api2.aped.xyz/cryptos/dailychange`);
+          cryptoChg.push(ch1.data.cryptoDailyChange);
+          cryptoChg = cryptoChg.slice(-10);
+          const ch2 = await axios.get(`https://api2.aped.xyz/forex/dailychange`);
+          forexChg.push(ch1.data.cryptoDailyChange);
+          forexChg = forexChg.slice(-10);
+  
+          const rep1 = await axios.get(`https://api2.aped.xyz/cryptos`);
+          setCryptoData(rep1.data);
+        }
+        catch{
+          
+        }
       
-        const rep2 = await axios.get(`https://api2.aped.xyz/forex`);
-        forexData = rep2.data
-        // setForexData(rep2.data);
-
-        const ch1 = await axios.get(`https://api2.aped.xyz/cryptos/dailychange`);
-        cryptoChg.push(ch1.data.cryptoDailyChange);
-        cryptoChg = cryptoChg.slice(-10);
-        const ch2 = await axios.get(`https://api2.aped.xyz/forex/dailychange`);
-        forexChg.push(ch1.data.cryptoDailyChange);
-        forexChg = forexChg.slice(-10);
-
-        const rep1 = await axios.get(`https://api2.aped.xyz/cryptos`);
-        setCryptoData(rep1.data);
       })();
     }, 1000)
 
