@@ -10,13 +10,20 @@ const AssetsItem = (props) => {
 	const [ change, setChange ] = useState([]);
 	const chg = props.dailyChange;
 	
-	const valueRange = Math.max(...chg) - Math.min(...chg);
-	const normalizedValues = chg.map(value => (value - Math.min(...chg)) / valueRange);
+	let sum = 0;
+	let graphData = chg.map((val) => {
+		sum += val;
+		return val;
+	});
+
+	const valueRange = Math.max(...graphData) - Math.min(...graphData);
+	const normalizedValues = graphData.map(value => (value - Math.min(...chg)) / valueRange);
 	const factor = 100;
-	const graphData = normalizedValues.map(value => { return {'btc': value * factor}});
+	graphData = normalizedValues.map(value => { return {'btc': value * factor}});
 
 	let len = chg.length;
-	let percent = len >= 2 ? (parseFloat(chg[len-1] * 100 / chg[len-2]) - 100).toFixed(4) : 0;
+	let percent = len >= 2 ? (parseFloat(chg[len-1] - chg[len-2]) * 100 / parseFloat(chg[len-1])).toFixed(4) : 0;
+	// let percent = len > 0 ? parseFloat(chg[len-1]).toFixed(4) : 0;
 
 	return (
 		<div className='!mx-[5px] !m-auto !w-[310px] min-[390px]:!w-[342px] !h-[219px] border-white rounded-[6px] !bg-[#141217] min-[390px]:p-[10px] p-[7px] relative border '>
@@ -29,7 +36,7 @@ const AssetsItem = (props) => {
 				<ReactCardFlip isFlipped={isFlip} flipDirection="horizontal">
 					<div onClick={() => setIsFlip(!isFlip)} className='relative !h-[199px]'>
 						<div className="flex justify-between font-black text-white text-[34px] leading-[34px] !mr-0">
-							<div className="w-[154px] h-[118px]">
+							<div className="w-[154px] h-[68px] mt-[30px]">
 								{
 									graphData.length > 5 && <Chart data={graphData} className="w-full h-full"></Chart>
 								}
