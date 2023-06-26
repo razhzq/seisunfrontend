@@ -5,24 +5,15 @@ import ReactCardFlip from "react-card-flip";
 
 const AssetsItem = (props) => {
 	const [ isFlip, setIsFlip ] = useState(false);
-	const [ data, setData ] = useState([]);
-	const [ price, setPrice ] = useState([]);
-	const [ change, setChange ] = useState([]);
 	const chg = props.dailyChange;
 	
-	let sum = 0;
-	let graphData = chg.map((val) => {
-		sum += val;
-		return val;
-	});
-
-	const valueRange = Math.max(...graphData) - Math.min(...graphData);
-	const normalizedValues = graphData.map(value => (value - Math.min(...chg)) / valueRange);
+	const valueRange = Math.max(...chg) - Math.min(...chg);
+	const normalizedValues = chg.map(value => (value - Math.min(...chg)) / valueRange);
 	const factor = 100;
-	graphData = normalizedValues.map(value => { return {'btc': value * factor}});
+	const graphData = normalizedValues.map(value => { return {'btc': value * factor}});
 
 	let len = chg.length;
-	let percent = len >= 2 ? (parseFloat(chg[len-1] - chg[len-2]) * 100 / parseFloat(chg[len-1])).toFixed(4) : 0;
+	let percent = len >= 2 ? (parseFloat(chg[len-1] - chg[len-2]) * 100 / Math.abs(parseFloat(chg[len-1]))).toFixed(4) : 0;
 	// let percent = len > 0 ? parseFloat(chg[len-1]).toFixed(4) : 0;
 
 	return (
