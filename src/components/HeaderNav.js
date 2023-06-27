@@ -14,13 +14,6 @@ const HeaderNav = () => {
 				<div className={` flex flex-wrap items-center justify-between ${navbarOpen ? 'pr-4': 'px-4'}`}>
 					<a href="/" className={`flex items-center ${navbarOpen ? 'invisible' : 'visible'}`}>
 						<img src={APED_LOGO} className="w-[113px] h-[37.43px]" alt="APED" />
-
-						{/* <div class="mt-[13.87px] flex">
-							<img src={APED_A} className='ml-[5.14px] w-[19.73px] h-[20.57px]' alt="APED" />
-							<img src={APED_P} className='ml-[1.74px] w-[15.4px] h-[20.57px]' alt="APED" />
-							<img src={APED_E} className='ml-[2.92px] w-[15.3px] h-[20.55px]' alt="APED" />
-							<img src={APED_D} className='ml-[3.09px] w-[16.67px] h-[20.6px]' alt="APED" />
-						</div> */}
 					</a>
 					<button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden dark:text-gray-400" aria-controls="navbar-default" aria-expanded="false" onClick={() => setNavbarOpen(!navbarOpen)}>
 						<span className="sr-only">Open main menu</span>
@@ -44,7 +37,7 @@ const HeaderNav = () => {
 									<div>
 										<a href="https://aped-xyz.gitbook.io/litepaper" className='text-center flex font-bold text-[32px]  text-white uppercase'>DOCS</a>
 										<a href="/contacts" className='text-center flex font-bold text-[32px]  text-white uppercase'>CONTACT</a>
-										<a href="#" className='text-center flex font-bold text-[32px]  text-white uppercase'>TWITTER</a>
+										<a href="https://twitter.com/aped_xyz" className='text-center flex font-bold text-[32px]  text-white uppercase'>TWITTER</a>
 										<a href="https://discord.com/invite/FbFjCz4PAR" className='w-[105px] text-center flex font-bold text-[32px]  text-white uppercase'>DISCORD</a>
 									</div>
 								</div>
