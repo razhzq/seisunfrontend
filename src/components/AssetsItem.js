@@ -79,15 +79,41 @@ const AssetsItem = (props) => {
 
 					<div className="flex flex-row justify-between relative text-white" onClick={() => setIsFlip(!isFlip)}>
 
-						<div>
-							<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">PAIR</p>
-							<p className="leading-[34px] text-[14px] mb-1">BTC/DAI</p>
-							<p className="leading-[34px] text-[14px] mb-1">SOL/DAI</p>
-							<p className="leading-[34px] text-[14px] mb-1">ETH/DAI</p>
-							<p className="leading-[34px] text-[14px] mb-1">BNB/DAI</p>
-						</div>
-
+						{
+							(props.name == "crypto" || props.name == "forex") ? 
+								<div>
+									<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">PAIR</p>
+									<p className="leading-[34px] text-[14px] mb-1">BTC/DAI</p>
+									<p className="leading-[34px] text-[14px] mb-1">SOL/DAI</p>
+									<p className="leading-[34px] text-[14px] mb-1">ETH/DAI</p>
+									<p className="leading-[34px] text-[14px] mb-1">BNB/DAI</p>
+								</div>
+							:	(
+								<div className='w-full h-[199px]'>
+									<div className='flex justify-between flex-row '>
+										<div className='w-[52.89px]'>
+											<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">PAIR</p>
+										</div>
+										<div className='w-[52.89px]'>
+											<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">PRICE</p>
+										</div>
+										<div className='w-[52.89px]'>
+											<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">CHG</p>
+										</div>
+									</div>
+									<div>
+										<p className='uppercase text-[14px]'>Coming Soon...</p>
+									</div>
+								</div>
+							)
+						}
 						
+						{/* <div>
+							<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">PRICE</p>
+						</div>
+						<div>
+							<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">CHG</p>
+						</div> */}
 							{
 								props.name == "crypto" && (
 									<div>
