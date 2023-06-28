@@ -7,6 +7,10 @@ import sol from '../assets/crypto/sol.png';
 import busd from '../assets/crypto/busd.png';
 import eth from '../assets/crypto/eth.webp';
 
+import EUR from '../assets/forex/EU.svg';
+import GBP from '../assets/forex/GB.svg';
+import CNH from '../assets/forex/CN.svg';
+import AUD from '../assets/forex/AU.svg';
 const AssetsItem = (props) => {
 	const [ isFlip, setIsFlip ] = useState(false);
 	const chg = props.dailyChange;
@@ -82,7 +86,7 @@ const AssetsItem = (props) => {
 					<div className="flex flex-row justify-between relative text-white" onClick={() => setIsFlip(!isFlip)}>
 
 						{
-							(props.name == "crypto" || props.name == "forex") ? 
+							props.name == "crypto" ? 
 								<div>
 									<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">PAIR</p>
 									<div className='flex items-center mb-1'>
@@ -102,7 +106,27 @@ const AssetsItem = (props) => {
 										<p className="leading-[34px] text-[14px] ml-[10px]">BNB/DAI</p>
 									</div>
 								</div>
-							:	(
+							:	props.name == "forex" ? 
+								<div>
+									<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">PAIR</p>
+									<div className='flex items-center mb-1'>
+										<img src={EUR} className='w-[20px] h-[20px]'></img>
+										<p className="leading-[34px] text-[14px] ml-[10px]">EUR/USD</p>
+									</div>
+									<div className='flex items-center mb-1'>
+										<img src={AUD} className='w-[20px] h-[20px]'></img>
+										<p className="leading-[34px] text-[14px] ml-[10px]">AUD/USD</p>
+									</div>
+									<div className='flex items-center mb-1'>
+										<img src={GBP} className='w-[20px] h-[20px]'></img>
+										<p className="leading-[34px] text-[14px] ml-[10px]">GBP/USD</p>
+									</div>
+									<div className='flex items-center mb-1'>
+										<img src={CNH} className='w-[20px] h-[20px]'></img>
+										<p className="leading-[34px] text-[14px] ml-[10px]">CNH/USD</p>
+									</div>
+								</div> :
+								(
 								<div className='w-full h-[199px]'>
 									<div className='flex justify-between flex-row '>
 										<div className='w-[52.89px]'>
@@ -144,10 +168,10 @@ const AssetsItem = (props) => {
 								props.name == "forex" && (
 									<div>
 										<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">PRICE</p>
-										<p className="leading-[34px] text-[14px] mb-1">{props.data[0] != undefined ? parseFloat(props.data[0]["EUR/USD"]).toFixed(4) : '0'}</p>
-										<p className="leading-[34px] text-[14px] mb-1">{props.data[1] != undefined ? parseFloat(props.data[1]["AUD/USD"]).toFixed(4) : '0'}</p>
-										<p className="leading-[34px] text-[14px] mb-1">{props.data[2] != undefined ? parseFloat(props.data[2]["GBP/USD"]).toFixed(4) : '0'}</p>
-										<p className="leading-[34px] text-[14px] mb-1">{props.data[3] != undefined ? parseFloat(props.data[3]["CNH/USD"]).toFixed(4) : '0'}</p>
+										<p className="leading-[34px] text-[14px] mb-1">{props.data[0] != undefined ? parseFloat(props.data[0]["EUR/USD"]).toFixed(4).toString() : '0'}</p>
+										<p className="leading-[34px] text-[14px] mb-1">{props.data[1] != undefined ? parseFloat(props.data[1]["AUD/USD"]).toFixed(4).toString() : '0'}</p>
+										<p className="leading-[34px] text-[14px] mb-1">{props.data[2] != undefined ? parseFloat(props.data[2]["GBP/USD"]).toFixed(4).toString() : '0'}</p>
+										<p className="leading-[34px] text-[14px] mb-1">{props.data[3] != undefined ? parseFloat(props.data[3]["CNH/USD"]).toFixed(4).toString() : '0'}</p>
 									</div>
 								)
 							}
