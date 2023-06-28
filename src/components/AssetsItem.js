@@ -2,6 +2,10 @@ import React, { useState, useEffect} from 'react';
 import Pattern from '../assets/pattern.png';
 import Chart from '../components/ChartItem';
 import ReactCardFlip from "react-card-flip";
+import btc from '../assets/crypto/btc.webp';
+import sol from '../assets/crypto/sol.png';
+import busd from '../assets/crypto/busd.png';
+import eth from '../assets/crypto/eth.webp';
 
 const AssetsItem = (props) => {
 	const [ isFlip, setIsFlip ] = useState(false);
@@ -81,10 +85,22 @@ const AssetsItem = (props) => {
 							(props.name == "crypto" || props.name == "forex") ? 
 								<div>
 									<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">PAIR</p>
-									<p className="leading-[34px] text-[14px] mb-1">BTC/DAI</p>
-									<p className="leading-[34px] text-[14px] mb-1">SOL/DAI</p>
-									<p className="leading-[34px] text-[14px] mb-1">ETH/DAI</p>
-									<p className="leading-[34px] text-[14px] mb-1">BNB/DAI</p>
+									<div className='flex items-center mb-1'>
+										<img src={btc} className='w-[20px] h-[20px]'></img>
+										<p className="leading-[34px] text-[14px] ml-[10px]">BTC/DAI</p>
+									</div>
+									<div className='flex items-center mb-1'>
+										<img src={sol} className='w-[20px] h-[20px]'></img>
+										<p className="leading-[34px] text-[14px] ml-[10px]">SOL/DAI</p>
+									</div>
+									<div className='flex items-center mb-1'>
+										<img src={eth} className='w-[20px] h-[20px]'></img>
+										<p className="leading-[34px] text-[14px] ml-[10px]">ETH/DAI</p>
+									</div>
+									<div className='flex items-center mb-1'>
+										<img src={busd} className='w-[20px] h-[20px]'></img>
+										<p className="leading-[34px] text-[14px] ml-[10px]">BNB/DAI</p>
+									</div>
 								</div>
 							:	(
 								<div className='w-full h-[199px]'>
