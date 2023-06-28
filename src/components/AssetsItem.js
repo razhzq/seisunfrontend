@@ -61,12 +61,10 @@ const AssetsItem = (props) => {
 
 									<div className="flex ml-[5px]">
 										<div>
-											<div>
-												<p className="text-white text-opacity-50 text-[10px] leading-[34px] text-left font-[400] uppercase">VOL:</p>
-											</div>
+											{/* <p className="text-white text-opacity-50 text-[10px] leading-[34px] text-left font-[400] uppercase">VOL:</p> */}
 										</div>
 
-										<p className="text-white uppercase text-[15px] font-[400] leading-[34px] ml-[15px]">$2,123,132</p>
+										{/* <p className="text-white uppercase text-[15px] font-[400] leading-[34px] ml-[15px]">$2,123,132</p> */}
 									</div>
 								</div>
 
