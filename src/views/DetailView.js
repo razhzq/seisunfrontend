@@ -1,9 +1,9 @@
 import React from 'react';
-import vines_left from '../assets/BondingCurve/vines_left.png';
+import vines_left from '../assets/BondingCurve/vines_left.svg';
 import trees_left from '../assets/BondingCurve/trees_left.png';
-import vines_right from '../assets/BondingCurve/vines_right.png';
+import vines_right from '../assets/BondingCurve/vines_right.svg';
 import trees_right from '../assets/BondingCurve/trees_right.png';
-import vines_top from '../assets/BondingCurve/vines_top.png';
+import vines_top from '../assets/BondingCurve/vines_top.svg';
 import trees_bottom from '../assets/BondingCurve/trees_bottom.png';
 
 const DetailView = () => {
@@ -61,7 +61,7 @@ const DetailView = () => {
 						<a href="https://aped-xyz.gitbook.io/litepaper/economic-structure/bonding-curve" className="bg-[#1A1A1A] w-[167px] h-[51px] rounded-[15px] leading-[34px] text-[18px] text-center uppercase text-white ml-[30px] min-[428px]:ml-[79px] flex justify-center font-bold items-center mt-[36px] !z-[9999] absolute">LEARN MORE</a>
 					</div>
 
-					<div className="w-[428px] absolute top-[140px]">
+					<div className="w-[428px] absolute top-[0px]">
 						<img src={vines_top} alt=''></img>
 					</div>
 				</div>
