@@ -110,19 +110,19 @@ const AssetsItem = (props) => {
 								<div>
 									<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">PAIR</p>
 									<div className='flex items-center mb-1'>
-										<img src={EUR} className='w-[20px] h-[20px]'></img>
+										<img src={EUR} className='w-[20px] h-[20px] rounded-[50%]'></img>
 										<p className="leading-[34px] text-[14px] ml-[10px]">EUR/USD</p>
 									</div>
 									<div className='flex items-center mb-1'>
-										<img src={AUD} className='w-[20px] h-[20px]'></img>
+										<img src={AUD} className='w-[20px] h-[20px] rounded-[50%]'></img>
 										<p className="leading-[34px] text-[14px] ml-[10px]">AUD/USD</p>
 									</div>
 									<div className='flex items-center mb-1'>
-										<img src={GBP} className='w-[20px] h-[20px]'></img>
+										<img src={GBP} className='w-[20px] h-[20px] rounded-[50%]'></img>
 										<p className="leading-[34px] text-[14px] ml-[10px]">GBP/USD</p>
 									</div>
 									<div className='flex items-center mb-1'>
-										<img src={CNH} className='w-[20px] h-[20px]'></img>
+										<img src={CNH} className='w-[20px] h-[20px] rounded-[50%]'></img>
 										<p className="leading-[34px] text-[14px] ml-[10px]">CNH/USD</p>
 									</div>
 								</div> :
@@ -168,10 +168,10 @@ const AssetsItem = (props) => {
 								props.name == "forex" && (
 									<div>
 										<p className="uppercase leading-[34px] font-bold text-[14px] mb-4">PRICE</p>
-										<p className="leading-[34px] text-[14px] mb-1">{props.data[0] != undefined ? parseFloat(props.data[0]["EUR/USD"]).toFixed(4).toString() : '0'}</p>
-										<p className="leading-[34px] text-[14px] mb-1">{props.data[1] != undefined ? parseFloat(props.data[1]["AUD/USD"]).toFixed(4).toString() : '0'}</p>
-										<p className="leading-[34px] text-[14px] mb-1">{props.data[2] != undefined ? parseFloat(props.data[2]["GBP/USD"]).toFixed(4).toString() : '0'}</p>
-										<p className="leading-[34px] text-[14px] mb-1">{props.data[3] != undefined ? parseFloat(props.data[3]["CNH/USD"]).toFixed(4).toString() : '0'}</p>
+										<p className="leading-[34px] text-[14px] mb-1">{props.data[0] != undefined ? parseFloat(props.data[0]["EUR/USD"]).toFixed(4) : '0'}</p>
+										<p className="leading-[34px] text-[14px] mb-1">{props.data[1] != undefined ? parseFloat(props.data[1]["AUD/USD"]).toFixed(4) : '0'}</p>
+										<p className="leading-[34px] text-[14px] mb-1">{props.data[2] != undefined ? parseFloat(props.data[2]["GBP/USD"]).toFixed(4) : '0'}</p>
+										<p className="leading-[34px] text-[14px] mb-1">{props.data[3] != undefined ? parseFloat(props.data[3]["CNH/USD"]).toFixed(4) : '0'}</p>
 									</div>
 								)
 							}
