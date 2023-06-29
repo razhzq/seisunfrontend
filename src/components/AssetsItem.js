@@ -16,7 +16,7 @@ const AssetsItem = (props) => {
 	const [ isFlip, setIsFlip ] = useState(false);
 	const data = props.data;
 
-	let graph = props.dailyChange.slice(-7);
+	let graph = props.dailyChange.slice(-8);
 	let len = props.dailyChange.length;
 	let percent = len == 0 ? 0: props.dailyChange[len-1];
 	const titles = [];
