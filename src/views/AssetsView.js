@@ -61,7 +61,7 @@ const AssetsView = () => {
     };
 
     const interval1 = setInterval(fetchData, 1000);
-    const interval2 = setInterval(fetchData1, 3600000);
+    const interval2 = setInterval(fetchData1, 1000);
     return () => {
       clearInterval(interval1);
       clearInterval(interval2);
