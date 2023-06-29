@@ -6,6 +6,7 @@ import axios from 'axios';
 
 let cryptoGraphData = [];
 let forexGraphData = [];
+let cnt = 0;
 
 const AssetsView = () => {
   const [cryptoData, setCryptoData] = useState([]);
@@ -14,18 +15,24 @@ const AssetsView = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [cryptoResponse, forexResponse, cryptoChangeResponse, forexChangeResponse] = await Promise.all([
+        const [cryptoResponse, forexResponse, cryptoChangeResponse, forexChangeResponse] = await Promise.all(cnt < 24 ? [
           axios.get(`https://api2.aped.xyz/cryptos`),
           axios.get(`https://api2.aped.xyz/forex`),
           axios.get(`https://api2.aped.xyz/cryptos/dailychange`),
           axios.get(`https://api2.aped.xyz/forex/dailychange`)
+        ] : [
+          axios.get(`https://api2.aped.xyz/cryptos`),
+          axios.get(`https://api2.aped.xyz/forex`)
         ]);
 
         const cryptoRes = cryptoResponse.data;
         const forexRes = forexResponse.data;
 
-        cryptoGraphData.push(cryptoChangeResponse.data.cryptoDailyChange);
-        forexGraphData.push(forexChangeResponse.data.forexDailyChange);
+        if(cnt < 24 ) {
+          cryptoGraphData.push(cryptoChangeResponse.data.cryptoDailyChange);
+          forexGraphData.push(forexChangeResponse.data.forexDailyChange);
+          cnt++;
+        }
 
         setCryptoData([cryptoRes[0], cryptoRes[8], cryptoRes[1], cryptoRes[11]]);
         setForexData([forexRes[0], forexRes[1], forexRes[2], forexRes[3]]);
@@ -35,33 +42,29 @@ const AssetsView = () => {
       }
     };
 
-    // const fetchData1 = async () => {
-    //   try {
-    //     const [cryptoResponse, forexResponse, cryptoChangeResponse, forexChangeResponse] = await Promise.all([
-    //       axios.get(`https://api2.aped.xyz/cryptos`),
-    //       axios.get(`https://api2.aped.xyz/forex`),
-    //       axios.get(`https://api2.aped.xyz/cryptos/dailychange`),
-    //       axios.get(`https://api2.aped.xyz/forex/dailychange`)
-    //     ]);
-
-    //     const cryptoRes = cryptoResponse.data;
-    //     const forexRes = forexResponse.data;
-    //     const cryptoChangeRes = cryptoChangeResponse.data.cryptoDailyChange;
-    //     const forexChangeRes = forexChangeResponse.data.forexDailyChange;
-
-    //     setCryptoData([cryptoRes[0], cryptoRes[8], cryptoRes[1], cryptoRes[11]]);
-    //     setForexData([forexRes[0], forexRes[1], forexRes[2], forexRes[3]]);
+    const fetchData1 = async () => {
+      try {
+        if( cnt >= 24 ) {
+          const [cryptoChangeResponse, forexChangeResponse] = await Promise.all([
+            axios.get(`https://api2.aped.xyz/cryptos/dailychange`),
+            axios.get(`https://api2.aped.xyz/forex/dailychange`)
+          ]);
+  
+          cryptoGraphData.push(cryptoChangeResponse.data.cryptoDailyChange);
+          forexGraphData.push(forexChangeResponse.data.forexDailyChange);
+          cnt++;
+        }
         
-    //   } catch (error) {
-    //     console.error(error);
-    //   }
-    // };
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
     const interval1 = setInterval(fetchData, 1000);
-    // const interval2 = setInterval(fetchData1, 3600000);
+    const interval2 = setInterval(fetchData1, 3600000);
     return () => {
       clearInterval(interval1);
-      // clearInterval(interval2);
+      clearInterval(interval2);
     }
   }, []);
 

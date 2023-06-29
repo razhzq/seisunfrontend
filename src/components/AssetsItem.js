@@ -16,7 +16,7 @@ const AssetsItem = (props) => {
 	const [ isFlip, setIsFlip ] = useState(false);
 	const data = props.data;
 
-	let graph = props.dailyChange.slice(-10);
+	let graph = props.dailyChange.slice(-24);
 	let len = props.dailyChange.length;
 	let percent = len == 0 ? 0: props.dailyChange[len-1];
 	const titles = [];
@@ -45,7 +45,7 @@ const AssetsItem = (props) => {
 						<div className="flex justify-between font-black text-white text-[34px] leading-[34px] !mr-0">
 							<div className="w-[154px] h-[68px] mt-[30px]">
 								{
-									graphData.length > 5 && <Chart data={graphData} className="w-full h-full"></Chart>
+									graphData.length > 7 && <Chart data={graphData} className="w-full h-full"></Chart>
 								}
 							</div>
 							<p className='flex items-center uppercase font-[900] text-[34px] leading-[34px] uppercase'>{props.name}</p>
