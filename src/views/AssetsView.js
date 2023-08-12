@@ -113,7 +113,7 @@ const AssetsView = () => {
   return (
     <div className="assets flex mx-auto bg-black h-screen items-center justify-center overflow-hidden">
       <div className="w-full">
-        <p className="text-white font-bold text-[45px] leading-[45px] text-center uppercase hidden md:block">Discover price feeds</p>
+        <p className="text-white font-bold text-[45px] leading-[45px] text-center uppercase hidden md:block">Discover APED Network</p>
         <p className="text-white font-bold text-[45px] leading-[45px] text-center uppercase block md:hidden ">Discover Tradable Assets</p>
         <p className="mt-[5px] text-[#EDEDED] font-[300] text-[16px] leading-[17px] text-center uppercase block md:hidden ">Leverage trade crypto, stocks, and forex.</p>
 

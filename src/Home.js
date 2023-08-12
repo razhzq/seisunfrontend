@@ -3,6 +3,7 @@ import TradeView from './views/TradeView';
 import AssetsView from './views/AssetsView';
 import DetailView from './views/DetailView';
 import BenefitView from './views/BenefitView';
+import BotView from './views/BotView';
 import { isMobile } from 'react-device-detect';
 
 
@@ -27,7 +28,12 @@ const Home = () => {
 				</section>
 				<section className="overlay">
 					<DetailView></DetailView>
-					<BenefitView></BenefitView>
+				</section>
+				<section className="overlay">
+					<BotView></BotView>
+					<div className="bg-[url('./assets/benefit/bg.svg')] bg-cover relative">
+						<BenefitView></BenefitView>
+					</div>
 				</section>
 			</div>			
     )

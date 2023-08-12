@@ -69,36 +69,6 @@
   align-items: center;
 }
 
-/* 
-.flip-card {
-  perspective: 1000px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-} */
-
-/* .card-rotate {
-  transform: rotateY(180deg);
-} */
-
-/* .flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-} */
-
-/* .flip-card-back {
-  color: white;
-  transform: rotateY(180deg);
-} */
-
 .flip-card .slick-list .slick-track {
   display: flex;
   justify-content: center;
@@ -118,3 +88,22 @@
 
 }
 
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}

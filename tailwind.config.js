@@ -7,6 +7,9 @@ module.exports = {
     extend: {
       scale: {
         '-100': '-1',
+      },
+      backgroundImage: {
+        'pricenetwork': "url('./assets/BondingCurve/PricingNetwork.svg')"
       }
     },
   },

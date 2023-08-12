@@ -5,11 +5,12 @@ import vines_right from '../assets/BondingCurve/vines_right.svg';
 import trees_right from '../assets/BondingCurve/trees_right.png';
 import vines_top from '../assets/BondingCurve/vines_top.svg';
 import trees_bottom from '../assets/BondingCurve/trees_bottom.png';
+import protocol from '../assets/BondingCurve/protocol.svg';
 
 const DetailView = () => {
 	return (
 		<div>
-			<div className="bg-white mx-auto relative overflow-hidden h-screen hidden xl:block">
+			<div className="bg-white mx-auto relative overflow-hidden h-screen hidden xl:block bg-[url('./assets/BondingCurve/PricingNetwork.svg')] bg-cover">
 				<div className="container mx-auto flex flex-col xl:flex-row md:h-screen h-[974px]" >
 					<div className="flex-1 relative overflow-hidden h-screen">
 						<div className='absolute left-[20px] xl:left-[124px]  top-[60px] w-[403px] text-left z-10 text-center'>
@@ -19,13 +20,10 @@ const DetailView = () => {
 							<a href="https://aped-xyz.gitbook.io/litepaper/economic-structure/bonding-curve" className="bg-[#1A1A1A] w-[105px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white ml-[160px] flex justify-center font-bold items-center mt-[4px]">LEARN MORE</a>
 						</div>
 
-						<div className="left-[30px] top-0 absolute w-[620px] hidden xl:block">
-							<img src={vines_left} alt=''></img>
+						<div className="left-[20px] top-0 absolute w-[620px] hidden md:block">
+							<img src={vines_left}></img>
 						</div>
 
-						<div className="left-[-254px] top-[133px] absolute w-[737px] visible xl:hidden">
-							<img src={vines_right} alt=''></img>
-						</div>
 					</div>
 
 					<div className="flex-1 relative overflow-hidden h-screen">
@@ -37,31 +35,31 @@ const DetailView = () => {
 
 						</div>
 
-						<div className="right-[-78px] top-0 absolute w-[797px] h-[630px] hidden xl:block">
-							<img src={vines_right} alt=''></img>
+						<div className="right-[-288px] top-0 absolute w-[1009px] hidden md:block">
+							<img src={vines_right}></img>
 						</div>
 					</div>
-				</div>
-			
-				<div className="left-[0px] bottom-0 absolute w-[832px] hidden xl:block">
-					<img src={trees_left} alt=''></img>
-				</div>
-				
-				<div className="right-[-250px] xl:right-[-4px] bottom-0 absolute w-[770px]">
-					<img src={trees_right} alt=''></img>
 				</div>
 			</div>
 
 			<div className='block xl:hidden bg-white flex justify-center relative overflow-hidden'>
-				<div className="overflow-hidden h-[700px] w-[428px]">
-					<div className='mt-[62px] w-full text-left text-center px-[30px]'>
+				
+				<div className="overflow-hidden h-[750px] w-[428px]">
+					<div className='relative'>
+						<div className='w-[1440px] h-[317px] ml-[-361px] absolute top-0'>
+							<img src={protocol}></img>
+						</div>
+
+						<p className="text-[48px] font-[700] text-white leading-[34px] relative z-[111] pt-[50px]">APED PROTOCOL</p>
+					</div>
+					<div className='mt-[120px] w-full text-left text-center px-[30px]'>
 						<p className='uppercase font-bold text-black text-[30px] min-[428px]:text-[45px] leading-[34px] text-left'>BONDING CURVE</p>
 						<p className='w-full mt-[13px] font-[400] text-[20px] leading-[34px] text-left'>Self-regulating mechanism for autonomous vault rebalancing to ensure price stability. Adjusts token supply in response to changes in protocol demand to accurately reflect token utility.</p>
 
 						<a href="https://aped-xyz.gitbook.io/litepaper/economic-structure/bonding-curve" className="bg-[#1A1A1A] w-[167px] h-[51px] rounded-[15px] leading-[34px] text-[18px] text-center uppercase text-white ml-[30px] min-[428px]:ml-[79px] flex justify-center font-bold items-center mt-[36px] !z-[9999] absolute">LEARN MORE</a>
 					</div>
 
-					<div className="w-[428px] absolute top-[0px]">
+					<div className="w-[428px] absolute top-[120px]">
 						<img src={vines_top} alt=''></img>
 					</div>
 				</div>

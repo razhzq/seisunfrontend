@@ -1,11 +1,11 @@
 import React from 'react';
 import BenefitItem from '../components/BenefitItem';
-import synth from '../assets/icons/synth.png';
-import cross from '../assets/icons/cross.png';
-import arrow from '../assets/icons/pink-arrow.png';
-import dollar from '../assets/icons/dollar.png';
-import clip from '../assets/icons/clip.png';
-import lock from '../assets/icons/lock.png';
+import synth from '../assets/icons/synth.svg';
+import cross from '../assets/icons/cross.svg';
+import arrow from '../assets/icons/pink-arrow.svg';
+import dollar from '../assets/icons/dollar.svg';
+import clip from '../assets/icons/clip.svg';
+import lock from '../assets/icons/lock.svg';
 
 const benefitData = [
 	{url: synth, title: 'Synthetic', text: 'Trade without directly owning assets. simulated through smart contracts.'},
@@ -18,15 +18,15 @@ const benefitData = [
 
 const BenefitView = () => {
 	return (
-		<div className='container py-[170px] lg:py-[270px] mx-auto bg-black'>
+		<div className="container py-[270px] lg:py-[270px] mx-auto ">
 			<div>
-				<p className='text-white font-bold text-[40px] leading-[40px] uppercase tracking-wider tracking-[.045em] hidden md:block'>Trade perpetual futures</p>
-				<p className='text-white font-bold text-[40px] leading-[40px] uppercase tracking-wider tracking-[.045em] block md:hidden'>Why APED</p>
+				<p className='font-bold text-[40px] leading-[40px] uppercase tracking-wider tracking-[.045em] hidden md:block'>Trade perpetual futures</p>
+				<p className='font-bold text-[40px] leading-[40px] uppercase tracking-wider tracking-[.045em] block md:hidden'>Why APED</p>
 			</div>
 
-      <div className="visible lg:invisible border border-white w-[290px] min-[390px]:w-[327px] border-opacity-50 mx-auto mt-[33px]"></div>
+      <div className="visible lg:invisible border border w-[290px] min-[390px]:w-[327px] border-opacity-50 mx-auto mt-[33px]"></div>
 
-			<div className="mt-[33px] px-4 gap-x-[110px] gap-y-[33px] justify-center bg-black bg-opacity-15 flex flex-wrap">
+			<div className="mt-[33px] px-4 gap-x-[110px] gap-y-[33px] justify-center bg-opacity-15 flex flex-wrap">
 				{
 					benefitData.map((item, ind) => 
 						<BenefitItem data={item} key={ind}></BenefitItem>
@@ -34,7 +34,7 @@ const BenefitView = () => {
 				}
 			</div>
 
-      <div className="visible lg:invisible border border-white w-[290px] min-[390px]:w-[327px] border-opacity-50 mx-auto mt-[33px]"></div>
+      {/* <div className="visible lg:invisible border border-white w-[290px] min-[390px]:w-[327px] border-opacity-50 mx-auto mt-[33px]"></div> */}
 
 		</div>
 	)

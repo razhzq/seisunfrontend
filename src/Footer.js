@@ -7,7 +7,7 @@ import twitter from './assets/Footer/twitter.svg';
 const Footer = () => {
 	
 	return (
-		<div className="bg-[url('./assets/footer_mobile.png')] md:bg-[url('./assets/Footer/footer.svg')] bg-cover bg-center h-[822px] flex flex-col justify-center items-center h-screen relative">
+		<div className="bg-[url('./assets/Footer/footer.svg')] md:bg-[url('./assets/Footer/footer.svg')] bg-cover bg-center h-[822px] flex flex-col justify-center items-center h-screen relative">
 
 			<div className='bg-[#000000] bg-opacity-[0] md:bg-opacity-[0.3] top-0 left-0 right-0 bottom-0 absolute'>
 
