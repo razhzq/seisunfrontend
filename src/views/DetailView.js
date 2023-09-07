@@ -1,92 +1,72 @@
-import React from 'react';
-import vines_left from '../assets/BondingCurve/vines_left.svg';
-import trees_left from '../assets/BondingCurve/trees_left.png';
-import vines_right from '../assets/BondingCurve/vines_right.svg';
-import trees_right from '../assets/BondingCurve/trees_right.png';
-import vines_top from '../assets/BondingCurve/vines_top.svg';
-import trees_bottom from '../assets/BondingCurve/trees_bottom.png';
-import protocol from '../assets/BondingCurve/protocol.svg';
+import { ApedCliff } from "../components/ApedCliff";
+import { VinesLeft } from "../components/VinesLeft";
+import { VinesRight } from "../components/VinesRight";
 
 const DetailView = () => {
-	return (
-		<div>
-			<div className="bg-white mx-auto relative overflow-hidden h-screen hidden xl:block bg-[url('./assets/BondingCurve/PricingNetwork.svg')] bg-cover">
-				<div className="container mx-auto flex flex-col xl:flex-row md:h-screen h-[974px]" >
-					<div className="flex-1 relative overflow-hidden h-screen">
-						<div className='absolute left-[20px] xl:left-[124px]  top-[60px] w-[403px] text-left z-10 text-center'>
-							<p className='uppercase font-bold text-black text-[45px] leading-[34px] ml-[30px]'>BONDING CURVE</p>
-							<p className='w-[365px] ml-[38px] mt-[40px] font-normal font-medium text-[20px] leading-[34px] h-[187px]'>Self-regulating mechanism for autonomous vault rebalancing to ensure price stability. Adjusts token supply in response to changes in protocol demand to accurately reflect token utility.</p>
+  return (
+    <div className="relative">
+      <div className="flex justify-center z-20 absolute top-0 left-0 right-0">
+        <div className="w-full absolute top-0 h-80 overflow-hidden">
+          <ApedCliff className="w-[max(1440px,100%)]" />
+        </div>
 
-							<a href="https://aped-xyz.gitbook.io/litepaper/economic-structure/bonding-curve" className="bg-[#1A1A1A] w-[105px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white ml-[160px] flex justify-center font-bold items-center mt-[4px]">LEARN MORE</a>
-						</div>
+        <p className="text-[48px] font-[700] text-white leading-[34px] relative z-[111] pt-[50px]">
+          APED PROTOCOL
+        </p>
+      </div>
 
-						<div className="left-[20px] top-0 absolute w-[620px] hidden md:block">
-							<img src={vines_left}></img>
-						</div>
+      <div className="bg-white flex xl:justify-around h-[170vh] xl:h-screen bg-[url('./assets/BondingCurve/PricingNetwork.svg')] bg-cover flex-col xl:flex-row items-center xl:items-start">
+        <div className="w-96 flex flex-col relative">
+          <div className="z-10 text-center pt-72 xl:pt-60 relative">
+            <div className="relative -z-10">
+              <p className="uppercase font-bold text-black text-[45px] leading-[34px]">
+                BONDING CURVE
+              </p>
 
-					</div>
+              <p className="w-[365px] mt-[40px] font-medium text-[20px] leading-[34px] h-[187px]">
+                Self-regulating mechanism for autonomous vault rebalancing to
+                ensure price stability. Adjusts token supply in response to
+                changes in protocol demand to accurately reflect token utility.
+              </p>
 
-					<div className="flex-1 relative overflow-hidden h-screen">
-						<div className='absolute right-0 xl:right-[127px] top-0 xl:top-[57px] w-[383px] z-10 text-center'>
-							<p className='uppercase font-bold text-black text-[45px] leading-[34px]'>PRICING NETWORK</p>
-							<p className='w-[365px] h-[120px] mt-[41px] font-normal font-medium text-[20px] leading-[34px] h-[120px]'>Node operators creating consensus for on-chain pricing data for use by the community.</p>
+              <a
+                href="https://aped-xyz.gitbook.io/litepaper/economic-structure/bonding-curve"
+                className="bg-[#1A1A1A] w-[105px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center font-bold items-center mt-[4px]"
+              >
+                LEARN MORE
+              </a>
+            </div>
+          </div>
+          <div className="absolute top-0 w-full h-full justify-center hidden xl:flex">
+            <VinesLeft className="scale-125 origin-top relative shrink-0 max-w-[100vw]" />
+          </div>
+        </div>
 
-							<a href="https://aped-xyz.gitbook.io/litepaper/oracles/aped-network" className="bg-[#1A1A1A] w-[105px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center mt-[32px] font-bold items-center">LEARN MORE</a>
+        <div className="w-96 flex flex-col relative">
+          <div className="z-10 text-center pt-8 xl:pt-60 relative">
+            <p className="uppercase font-bold text-black text-[45px] leading-[34px]">
+              PRICING NETWORK
+            </p>
+            <p className="w-[365px] mt-[41px] font-medium text-[20px] leading-[34px] h-[120px]">
+              Node operators creating consensus for on-chain pricing data for
+              use by the community.
+            </p>
 
-						</div>
+            <a
+              href="https://aped-xyz.gitbook.io/litepaper/oracles/aped-network"
+              className="bg-[#1A1A1A] w-[105px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center mt-[12px] font-bold items-center"
+            >
+              LEARN MORE
+            </a>
+          </div>
 
-						<div className="right-[-288px] top-0 absolute w-[1009px] hidden md:block">
-							<img src={vines_right}></img>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className='block xl:hidden bg-white flex justify-center relative overflow-hidden'>
-				
-				<div className="overflow-hidden h-[750px] w-[428px]">
-					<div className='relative'>
-						<div className='w-[1440px] h-[317px] ml-[-361px] absolute top-0'>
-							<img src={protocol}></img>
-						</div>
-
-						<p className="text-[48px] font-[700] text-white leading-[34px] relative z-[111] pt-[50px]">APED PROTOCOL</p>
-					</div>
-					<div className='mt-[120px] w-full text-left text-center px-[30px]'>
-						<p className='uppercase font-bold text-black text-[30px] min-[428px]:text-[45px] leading-[34px] text-left'>BONDING CURVE</p>
-						<p className='w-full mt-[13px] font-[400] text-[20px] leading-[34px] text-left'>Self-regulating mechanism for autonomous vault rebalancing to ensure price stability. Adjusts token supply in response to changes in protocol demand to accurately reflect token utility.</p>
-
-						<a href="https://aped-xyz.gitbook.io/litepaper/economic-structure/bonding-curve" className="bg-[#1A1A1A] w-[167px] h-[51px] rounded-[15px] leading-[34px] text-[18px] text-center uppercase text-white ml-[30px] min-[428px]:ml-[79px] flex justify-center font-bold items-center mt-[36px] !z-[9999] absolute">LEARN MORE</a>
-					</div>
-
-					<div className="w-[428px] absolute top-[120px]">
-						<img src={vines_top} alt=''></img>
-					</div>
-				</div>
-				
-				
-			</div>
-
-			<div className='block xl:hidden bg-white flex justify-center  overflow-hidden'>
-				<div className="overflow-hidden h-[570px] w-[428px] relative">
-					<div className='mt-[30px] w-full text-left z-10 text-center pl-[30px] pr-[14px]'>
-						<p className='uppercase font-bold text-black text-[30px] min-[428px]:text-[45px] leading-[34px] text-left'>PRICING NETWORK</p>
-					</div>
-					<div className='mt-[19px] w-full text-left z-10 text-center  h-[570px] px-[30px]'>
-						<p className='w-full mt-[19px] font-normal font-medium text-[20px] leading-[34px] text-left'>Node operators creating consensus for on-chain pricing data for use by the community.</p>
-
-						<a href="https://aped-xyz.gitbook.io/litepaper/oracles/aped-network" className="bg-[#1A1A1A] w-[167px] h-[51px] rounded-[15px] leading-[34px] text-[18px] text-center uppercase text-white ml-[30px] min-[428px]:ml-[79px] flex justify-center font-bold items-center mt-[50px] absolute !z-[9999]">LEARN MORE</a>						
-					</div>
-
-					<div className="right-[-220px] min-[428px]:right-[-176px] top-[170px] min-[428px]:top-[130px] absolute w-[543px] h-[440px]">
-						<img src={trees_bottom} alt=''></img>
-					</div>
-				</div>
-
-				
-			</div>
-		</div>
-	)
-}
+          <div className="absolute top-0 w-full h-full justify-center hidden xl:flex">
+            <VinesRight className="scale-125 origin-top relative shrink-0 right-14 max-w-[100vw]" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default DetailView;
