@@ -6,7 +6,7 @@ const DetailView = () => {
   return (
     <div className="relative">
       <div className="flex justify-center z-20 absolute top-0 left-0 right-0">
-        <div className="w-full absolute top-0 h-80 overflow-hidden">
+        <div className="w-full absolute top-0 overflow-hidden">
           <ApedCliff className="w-[max(1440px,100%)]" />
         </div>
 
@@ -17,7 +17,7 @@ const DetailView = () => {
 
       <div className="bg-white flex xl:justify-around h-[170vh] xl:h-screen bg-[url('./assets/BondingCurve/PricingNetwork.svg')] bg-cover flex-col xl:flex-row items-center xl:items-start">
         <div className="w-96 flex flex-col relative">
-          <div className="z-10 text-center pt-72 xl:pt-60 relative">
+          <div className="z-10 text-center pt-72 xl:pt-80 relative">
             <div className="relative -z-10">
               <p className="uppercase font-bold text-black text-[45px] leading-[34px]">
                 BONDING CURVE
@@ -43,7 +43,7 @@ const DetailView = () => {
         </div>
 
         <div className="w-96 flex flex-col relative">
-          <div className="z-10 text-center pt-8 xl:pt-60 relative">
+          <div className="z-10 text-center pt-8 xl:pt-80 relative">
             <p className="uppercase font-bold text-black text-[45px] leading-[34px]">
               PRICING NETWORK
             </p>
