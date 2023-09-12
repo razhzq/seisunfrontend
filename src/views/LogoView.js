@@ -1,10 +1,10 @@
 import React from 'react';
 import Slider from 'react-slick';
-import arbitrum from '../assets/arbitrum.png';
-import polygon from '../assets/polygon.png';
-import optimism from '../assets/optimism.png';
-import chainlink from '../assets/chainlink.png';
-import marker from '../assets/marker.png';
+import arbitrum from '../assets/Trade/arbitrum.svg';
+import polygon from '../assets/Trade/polygon.png';
+import zksync from '../assets/Trade/zksync.svg';
+import chainlink from '../assets/Trade/chainlink.svg';
+import marker from '../assets/Trade/marker.svg';
 
 const LogoView = () => {
   const settings = {
@@ -17,6 +17,7 @@ const LogoView = () => {
     dots: false,
 		autoplay: true,
 		autoplayspeed: 1000,
+    // variableWidth: true,
     responsive: [
       {
         breakpoint: 1440,
@@ -50,15 +51,15 @@ const LogoView = () => {
   };
 
   return (
-    <div className="logos px-4">
+    <div className="logos max-w-[1440px] mx-auto">
       <section className="center slider">
-        <div className="py-[24px] md:py-[70px]">
+        <div>
           <Slider {...settings}>
-						<img className="" src={arbitrum} alt="" />
-						<img className="trending-img" src={polygon} alt="" />
-						<img className="trending-img" src={optimism} alt="" />
-						<img className="trending-img" src={chainlink} alt="" />
-						<img className="trending-img" src={marker} alt="" />
+						<img className="!w-[251.77px] !h-[51px]" src={arbitrum} alt="" />
+						<img className="!w-[186px] h-[39.11px]" src={polygon} alt="" />
+						<img className="!w-[196px] h-[38.32px]" src={zksync} alt="" />
+						<img className="!w-[191.53px] h-[58.84px]" src={chainlink} alt="" />
+						<img className="!w-[199px] h-[35.12px]" src={marker} alt="" />
 					</Slider>
         </div>
       </section>
