@@ -11,10 +11,11 @@ const TradeView = () => {
           </p>
 
           <a
-            href="https://discord.com/invite/FbFjCz4PAR"
+            href="https://t.me/ApedTrade"
+            target="_blank"
             className="border bg-[#0E0716] border-[#AEAEAE] border-opacity-80 rounded-[10px] text-white w-[184px] p-[12px] font-bold leading-[34px] uppercase mt-[88px] 2md:mt-[35px]"
           >
-            JOIN DISCORD
+            JOIN TELEGRAM
           </a>
         </div>
 

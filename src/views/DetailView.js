@@ -29,12 +29,12 @@ const DetailView = () => {
                 changes in protocol demand to accurately reflect token utility.
               </p>
 
-              <a
-                href="https://aped-xyz.gitbook.io/litepaper/economic-structure/bonding-curve"
+              <span
+                // href="#"
                 className="bg-[#1A1A1A] w-[105px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center font-bold items-center mt-[4px]"
               >
-                LEARN MORE
-              </a>
+                COMING SOON
+              </span>
             </div>
           </div>
           <div className="absolute top-0 w-full h-full justify-center hidden xl:flex">
@@ -51,13 +51,12 @@ const DetailView = () => {
               Node operators creating consensus for on-chain pricing data for
               use by the community.
             </p>
-
-            <a
-              href="https://aped-xyz.gitbook.io/litepaper/oracles/aped-network"
+            <span
+              // href="#"
               className="bg-[#1A1A1A] w-[105px] rounded-[15px] leading-[34px] text-[12px] text-center uppercase text-white mx-auto flex justify-center mt-[12px] font-bold items-center"
             >
-              LEARN MORE
-            </a>
+              COMING SOON
+            </span>
           </div>
 
           <div className="absolute top-0 w-full h-full justify-center hidden xl:flex">

@@ -2,6 +2,9 @@ import React from "react";
 import APED_LOGO from "../assets/Header/logo.svg";
 
 const HeaderNav = () => {
+  const navigatetoDocs = () => {
+    window.open("https://docs.aped.xyz", "_blank");
+  };
   const [navbarOpen, setNavbarOpen] = React.useState(false);
 
   return (
@@ -52,13 +55,11 @@ const HeaderNav = () => {
             <ul className="font-medium flex flex-col  md:p-0 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
               {!navbarOpen ? (
                 <div className="bg-black flex flex-row gap-[30px]">
-                  <li className="w-[105px] text-center h-[32px] border-[#AEAEAE] border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase">
-                    <a
-                      href="https://aped-xyz.gitbook.io/litepaper"
-                      className="text-white"
-                    >
-                      docs
-                    </a>
+                  <li
+                    onClick={navigatetoDocs}
+                    className="w-[105px] text-white cursor-pointer text-center h-[32px] border-[#AEAEAE] border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase"
+                  >
+                    docs
                   </li>
 
                   <li className="w-[105px] text-center text-[16px] border-[#AEAEAE] border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase">
@@ -69,9 +70,11 @@ const HeaderNav = () => {
                 </div>
               ) : (
                 <div className="bg-black fixed h-[100vh] w-full pl-8 z-50">
-                  <div>
+                  <div onClick={navigatetoDocs}>
                     <a
                       href="https://aped-xyz.gitbook.io/litepaper"
+                      target="_blank"
+                      rel="noreferrer"
                       className="text-center flex font-bold text-[32px]  text-white uppercase"
                     >
                       DOCS
