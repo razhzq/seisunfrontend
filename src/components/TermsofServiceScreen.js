@@ -2,7 +2,7 @@ export default function TermsofServiceScreen() {
   return (
     <div
       className="mb-20 px-4 text-white text-left"
-      style={{ marginTop: "5rem" }}
+      style={{ marginTop: "3.9rem" }}
     >
       {" "}
       <h1 className="font-bold mb-3">Aped Bot Terms of Service</h1>
