@@ -1,9 +1,5 @@
 import React, { useEffect } from "react";
 import { isMobile } from "react-device-detect";
-import AssetsView from "./views/AssetsView";
-import BenefitView from "./views/BenefitView";
-import BotView from "./views/BotView";
-import DetailView from "./views/DetailView";
 import TradeView from "./views/TradeView";
 
 const Home = () => {
@@ -22,7 +18,7 @@ const Home = () => {
       <section>
         <TradeView></TradeView>
       </section>
-      <section className="overlay">
+      {/* <section className="overlay">
         <AssetsView></AssetsView>
       </section>
       <section className="">
@@ -31,8 +27,8 @@ const Home = () => {
       <section className="overlay">
         <BotView></BotView>
         <BenefitView />
-      </section>
-      <div className="w-full h-[175px] bg-[#0e041f]" />
+      </section> */}
+      {/* <div className="w-full h-[175px] bg-[#0e041f]" /> */}
     </div>
   );
 };
