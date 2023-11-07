@@ -11,13 +11,24 @@ const BotView = () => {
 
       <div className="container mx-auto">
         <div className="lg:border-[7px] md:border-[#716891] mx-auto max-w-[956px] px-[20px] pt-0 lg:pt-5 pb-[60px] mt-[30px]">
-          <p className="ml-[10px] text-[64px] font-[800] leading-[60px] tracking-[-3.2px] uppercase text-white text-left">
-            A new way
-            <br />
-            to trade
-            <br />
-            perps
-          </p>
+          <div className="flex justify-between">
+            <p className="ml-[10px] text-[64px] font-[800] leading-[60px] tracking-[-3.2px] uppercase text-white text-left">
+              A new way
+              <br />
+              to trade
+              <br />
+              perps
+            </p>
+            <a
+              href="https://aped.gg/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-white bg-[#1a1a1a] border-2 border-[#393939] font-bold rounded-xl max-h-[3rem] p-4 pb-[2.25rem]"
+            >
+              LEARN MORE
+            </a>
+          </div>
+
           <p className="text-left lg:text-center text-[16px] text-white font-bold tracking-[0.72px] leading-[39.5px] uppercase mt-[30px]">
             Trade on your favorite existing platforms or optimize for open
             interest, low fees or specific pairs.
