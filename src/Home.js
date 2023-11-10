@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { isMobile } from "react-device-detect";
 import TradeView from "./views/TradeView";
 
+console.log("HELLO");
+
 const Home = () => {
   useEffect(() => {
     if (isMobile) {
